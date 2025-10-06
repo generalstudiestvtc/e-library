@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة المعرفة الرقمية - قسم الدراسات العامة</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --teal-green: #1a7f75;
+            --dark-teal: #14665f;
+            --light-teal: #2aa79b;
+            --accent-teal: #34c6b8;
+            --light-accent: #e8f6f4;
+            --dark-grey: #2d3748;
+            --dark-footer: #1a202c;
+            --light-grey: #f7fafc;
+            --white: #ffffff;
+            --gradient-overlay: linear-gradient(135deg, rgba(26, 127, 117, 0.85), rgba(42, 167, 155, 0.9));
+            --gradient-card: linear-gradient(135deg, #ffffff, #f8fffe);
+            --border-radius: 16px;
+            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            --box-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-grey);
+            background-color: var(--light-grey);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(26, 127, 117, 0.85), rgba(42, 167, 155, 0.9)), url('https://images.hogeschoolrotterdam.nl/Blob/69a72d7dc37f4eea934e068ee09df000/05bd68a2c7fd40729551cd59479647fc.jpg?mode=crop&quality=90&format=jpg&width=1869&height=539');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 400px;
+            height: 400px;
+            margin-left: 30px;
+            filter: brightness(0) invert(1);
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .title-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .title-section p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        /* Navigation - التحديثات المطلوبة */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 6px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-grey);
+            font-weight: 700;
+            padding: 10px 18px;
+            border-radius: 0; /* إزالة الحواف */
+            transition: var(--transition);
+            position: relative;
+            background: transparent; /* خلفية شفافة */
+        }
+
+        /* إزالة جميع التأثيرات المعقدة */
+        .nav-links a::before,
+        .nav-links a::after {
+            display: none; /* إخفاء جميع العناصر الزائفة */
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-3px); /* حركة رفع بسيطة */
+            color: var(--teal-green); /* تغيير لون النص إلى الأخضر المزرق */
+            background: transparent; /* خلفية شفافة تماماً */
+        }
+
+        .nav-links a.active {
+            color: var(--teal-green);
+            background: transparent; /* خلفية شفافة */
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--teal-green);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* باقي الأنماط تبقى كما هي */
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 127, 117, 0.75), rgba(42, 167, 155, 0.8)), url('https://online.uky.edu/sites/default/files/2024-08/header-library-information-science.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 70px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--teal-green);
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            background: var(--light-accent);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .stat-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .stat-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--teal-green);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .stat-icon {
+            font-size: 2.8rem;
+            color: var(--teal-green);
+            margin-bottom: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--teal-green);
+            margin-bottom: 8px;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+            color: var(--dark-grey);
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 35px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            scroll-margin-top: 100px;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--teal-green);
+        }
+
+        .section-title {
+            color: var(--teal-green);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--accent-teal);
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .section-title i {
+            margin-left: 12px;
+            font-size: 1.8rem;
+        }
+
+        /* Grid Layouts */
+        .courses-grid, .icons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card, .icon-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius);
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before, .icon-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--teal-green);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .course-card:hover::before, .icon-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .course-card:hover, .icon-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: rgba(26, 127, 117, 0.2);
+        }
+
+        .course-code {
+            font-weight: 800;
+            color: var(--teal-green);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .course-name {
+            margin-top: 8px;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .icon-card i {
+            font-size: 2.2rem;
+            color: var(--teal-green);
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .icon-card:hover i {
+            transform: scale(1.15);
+            color: var(--light-teal);
+        }
+
+        /* Survey Section */
+        .survey-section {
+            background: linear-gradient(rgba(26, 127, 117, 0.75), rgba(42, 167, 155, 0.8)), url('https://libraries.acm.org/binaries/ctaimagelarge/content/gallery/acm/ctas/publications/nodes-764.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 60px 35px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .survey-content {
+            position: relative;
+            z-index: 1;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .survey-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .survey-description {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .survey-button {
+            display: inline-flex;
+            align-items: center;
+            background: var(--white);
+            color: var(--teal-green);
+            padding: 16px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .survey-button i {
+            margin-left: 10px;
+            font-size: 1.4rem;
+        }
+
+        .survey-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            background: var(--light-accent);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            padding: 35px;
+            border-radius: var(--border-radius);
+            width: 90%;
+            max-width: 650px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalAppear 0.4s ease;
+        }
+
+        @keyframes modalAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: var(--dark-grey);
+            background: none;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg);
+            color: var(--teal-green);
+        }
+
+        .modal-title {
+            color: var(--teal-green);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.6rem;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius);
+            padding: 20px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--teal-green);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .option-card:hover::before {
+            opacity: 0.08;
+        }
+
+        .option-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(26, 127, 117, 0.2);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .option-card i {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            display: block;
+            color: var(--teal-green);
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .option-card:hover i {
+            transform: scale(1.15);
+            color: var(--light-teal);
+        }
+
+        .option-card div {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .sub-options {
+            display: none;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid var(--light-grey);
+        }
+
+        .sub-options.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .sub-options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .sub-option-card {
+            background: var(--gradient-card);
+            border-radius: var(--border-radius);
+            padding: 20px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sub-option-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--teal-green);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .sub-option-card:hover::before {
+            opacity: 0.08;
+        }
+
+        .sub-option-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(26, 127, 117, 0.2);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .sub-option-card i {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            display: block;
+            color: var(--teal-green);
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .sub-option-card:hover i {
+            transform: scale(1.15);
+            color: var(--light-teal);
+        }
+
+        .sub-option-card div {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        /* Department Message */
+        .department-message {
+            background: linear-gradient(rgba(26, 127, 117, 0.85), rgba(42, 167, 155, 0.9));
+            color: var(--white);
+            padding: 50px 40px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-content {
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .message-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .signature {
+            text-align: left;
+            margin-top: 25px;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-footer);
+            color: var(--white);
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 400px;
+            height: 400px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: var(--transition);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-text {
+            margin-top: 15px;
+        }
+
+        .footer-text p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            .courses-grid, .icons-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+            
+            .logo, .footer-logo {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-section {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+
+            .logo, .footer-logo {
+                width: 250px;
+                height: 250px;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--white);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                padding: 15px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 3px 0;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px;
+                border-radius: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .courses-grid, .icons-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sub-options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .survey-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 25px 20px;
+            }
+
+            .courses-grid, .icons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .survey-section {
+                padding: 40px 20px;
+            }
+
+            .logo, .footer-logo {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="https://tvtc.gov.sa/Style%20Library/tvtc/images/logo.svg" alt="شعار المؤسسة العامة للتدريب التقني والمهني" class="logo">
+                    <div class="title-section">
+                        <h1>مكتبة المعرفة الرقمية</h1>
+                        <p>قسم الدراسات العامة - الكلية التقنية للبنات بنجران</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#courses" class="active">المقررات التدريبية</a></li>
+                <li><a href="#solutions">المشاكل والحلول</a></li>
+                <li><a href="#regulations">اللوائح والأدلة</a></li>
+                <li><a href="#experiences">التجارب الناجحة</a></li>
+                <li><a href="#suggestions">اقتراحات ونماذج</a></li>
+                <li><a href="#references">مراجع وكتب</a></li>
+                <li><a href="#survey">استبيان الرضاء</a></li>
+                <li><a href="#head-message">كلمة رئيسة القسم</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- باقي المحتوى يبقى كما هو -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>مرحباً بكم في مكتبة المعرفة الرقمية</h2>
+            <p>منصة شاملة للموارد التعليمية والتدريبية لقسم الدراسات العامة بالكلية التقنية للبنات بنجران</p>
+            <a href="#courses" class="cta-button">استكشف المقررات التدريبية</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-number">10</div>
+                    <div class="stat-text">مقررات تدريبية</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-number">22</div>
+                    <div class="stat-text">لائحة ودليل</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="stat-number">25</div>
+                    <div class="stat-text">تجربة تدريبية ناجحة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-number">17</div>
+                    <div class="stat-text">مرجع وكتاب</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <section id="intro" class="section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> قسم الدراسات العامة</h2>
+            <p>يُعد قسم الدراسات العامة من الأساسيات التي تُؤهل المتدربين لمواصلة التدريب في التخصصات التقنية المختلفة. يركز هذا القسم على تزويد المتدربين بالمعرفة الأساسية التي تعزز من قدرتهم على التفاعل مع التخصصات الأخرى، بالإضافة إلى تطوير مهاراتهم الشخصية.</p>
+        </section>
+
+        <!-- Training Courses Section -->
+        <section id="courses" class="section">
+            <h2 class="section-title"><i class="fas fa-book"></i> المقررات التدريبية</h2>
+            <div class="courses-grid">
+                <!-- سيتم إضافة المقررات ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- Problems and Solutions Section -->
+        <section id="solutions" class="section">
+            <h2 class="section-title"><i class="fas fa-tools"></i> المشاكل والحلول</h2>
+            <div class="icons-grid" id="solutions-grid">
+                <!-- سيتم إضافة المشاكل والحلول ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- Regulations Section -->
+        <section id="regulations" class="section">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> اللوائح والأدلة والتعاميم</h2>
+            <div class="icons-grid" id="regulations-grid">
+                <!-- سيتم إضافة اللوائح ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- Successful Experiences Section -->
+        <section id="experiences" class="section">
+            <h2 class="section-title"><i class="fas fa-star"></i> التجارب التدريبية الناجحة</h2>
+            
+            <h3 style="margin: 20px 0 15px; color: var(--teal-green); font-weight: 800; font-size: 1.3rem;">نماذج المدربات</h3>
+            <div class="icons-grid" id="trainers-grid">
+                <!-- سيتم إضافة نماذج المدربات ديناميكياً باستخدام JavaScript -->
+            </div>
+            
+            <h3 style="margin: 30px 0 15px; color: var(--teal-green); font-weight: 800; font-size: 1.3rem;">نماذج المتدربات</h3>
+            <div class="icons-grid" id="trainees-grid">
+                <!-- سيتم إضافة نماذج المتدربات ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- Suggestions and Forms Section -->
+        <section id="suggestions" class="section">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> اقتراحات ونماذج</h2>
+            <div class="icons-grid" id="suggestions-grid">
+                <!-- سيتم إضافة الاقتراحات ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- References and Books Section -->
+        <section id="references" class="section">
+            <h2 class="section-title"><i class="fas fa-book-open"></i> مراجع وكتب</h2>
+            <div class="icons-grid" id="references-grid">
+                <!-- سيتم إضافة المراجع ديناميكياً باستخدام JavaScript -->
+            </div>
+        </section>
+
+        <!-- Survey Section -->
+        <section id="survey" class="survey-section">
+            <div class="survey-content">
+                <h2 class="survey-title">قياس رضاء زائر المكتبة</h2>
+                <p class="survey-description">
+                    نهدف إلى تحسين خدمات مكتبة المعرفة الرقمية باستمرار، ونحتاج إلى رأيكم القيم للمساعدة في تحقيق ذلك. 
+                    <br>انضمي إلى الاستبيان على منصة Microsoft Forms للمساهمة في تحسين مكتبة المعرفة الرقمية
+                </p>
+                <a href="https://forms.office.com/pages/responsepage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UMTExRUxWNE5aNEk2MVdLS0hDU01DRThRRCQlQCNjPTEu&route=shorturl" target="_blank" class="survey-button">
+                    <i class="fas fa-poll"></i>
+                    المشاركة في الاستبيان
+                </a>
+            </div>
+        </section>
+
+        <!-- Head of Department Message -->
+        <section id="head-message" class="department-message">
+            <h2 class="section-title" style="color: white; border-bottom-color: var(--accent-teal);"><i class="fas fa-quote-right"></i> كلمة رئيسة القسم</h2>
+            <div class="message-content">
+                <p>يسرّ قسم الدراسات العامة بالكلية التقنية للبنات بنجران، التابع للمؤسسة العامة للتدريب التقني والمهني، أن يرحّب بجميع المدربات والمتدربات عبر منصة مكتبة المعرفة الرقمية، التي تمثل إحدى المبادرات النوعية الهادفة إلى دعم العملية التعليمية والتدريبية وتوفير بيئة رقمية ثرية بالمصادر والمعارف الحديثة.</p>
+                
+                <p>إننا في قسم الدراسات العامة نؤمن بأن المعرفة هي أساس التميز والإبداع، وأن تمكين المتدربات من الوصول إلى مصادر التعلم المتنوعة يسهم في بناء جيل تقني مبدع قادر على المنافسة والمشاركة الفاعلة في تحقيق رؤية المملكة 2030.</p>
+                
+                <p>نسعى من خلال هذه المكتبة إلى إثراء المحتوى المعرفي وتعزيز ثقافة البحث والتعلم الذاتي لدى المتدربات، عبر إتاحة موارد تعليمية رقمية تفاعلية تدعم مقررات القسم وتواكب المستجدات في ميادين العلوم العامة والمهارات الأساسية.</p>
+                
+                <p>سائلين الله أن يوفق الجميع لما فيه الخير والنفع، وأن يجعل هذه المكتبة منبرًا لنشر العلم وبناء مستقبل مشرق لبنات هذا الوطن.</p>
+                
+                <div class="signature">
+                    <p>أ. فاطمة صالح الفهيد</p>
+                    <p>رئيسة قسم الدراسات العامة</p>
+                    <p>الكلية التقنية للبنات بنجران</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <img src="https://tvtc.gov.sa/Style%20Library/tvtc/images/logo.svg" alt="شعار المؤسسة العامة للتدريب التقني والمهني" class="footer-logo">
+                <div class="footer-links">
+                    <a href="#courses">المقررات</a>
+                    <a href="#solutions">المشاكل والحلول</a>
+                    <a href="#regulations">اللوائح</a>
+                    <a href="#experiences">التجارب</a>
+                    <a href="#suggestions">الاقتراحات</a>
+                    <a href="#references">المراجع</a>
+                    <a href="#survey">استبيان الرضاء</a>
+                </div>
+                <div class="footer-text">
+                    <p>المؤسسة العامة للتدريب التقني والمهني</p>
+                    <p>كلية التقنية للبنات بنجران</p>
+                    <p>قسم الدراسات العامة</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Options Modal -->
+    <div id="courseModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3 class="modal-title" id="modalCourseTitle">اسم المقرر</h3>
+            <div class="options-grid" id="courseOptions">
+                <!-- سيتم إضافة خيارات المقرر ديناميكياً -->
+            </div>
+            <div class="sub-options" id="courseSubOptions">
+                <h4 style="margin-bottom: 15px; text-align: center; color: var(--teal-green); font-weight: 700;">اختر الإجراء المطلوب</h4>
+                <div class="sub-options-grid">
+                    <div class="sub-option-card" data-action="preview">
+                        <i class="fas fa-eye"></i>
+                        <div>المعاينة</div>
+                    </div>
+                    <div class="sub-option-card" data-action="download">
+                        <i class="fas fa-download"></i>
+                        <div>التحميل</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- General Options Modal -->
+    <div id="generalModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h3 class="modal-title" id="modalGeneralTitle">خيارات العنصر</h3>
+            <div class="sub-options-grid">
+                <div class="sub-option-card" data-action="preview">
+                    <i class="fas fa-eye"></i>
+                    <div>المعاينة</div>
+                </div>
+                <div class="sub-option-card" data-action="download">
+                    <i class="fas fa-download"></i>
+                    <div>التحميل</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات الموقع
+        const siteData = {
+            courses: [
+                { code: "101احصا", name: "مقدمة في الإحصاء" },
+                { code: "101اسلم", name: "الدراسات الإسلامية" },
+                { code: "101رياض", name: "الرياضيات" },
+                { code: "101عربي", name: "الكتابة الفنية" },
+                { code: "101فيزي", name: "الفيزياء" },
+                { code: "101اسلك", name: "السلوك الوظيفي والمستقبل المهني" },
+                { code: "101رياد", name: "اساسيات ريادة الأعمال" },
+                { code: "ENGL101", name: "English Language 1" },
+                { code: "ENGL102", name: "English Language 2" },
+                { code: "ENGL103", name: "English Language 3" }
+            ],
+            solutions: [
+                "قاعدة بيانات المشكلات والحلول",
+                "دليل بوابة التدرب الإلكتروني أعضاء هيئة التدريب",
+                "تطبيق استيراد اختبار أو مخزن أسئلة من ملف إكسل إلى البلاك بورد",
+                "حل مشكلة تعليق البلاك بورد",
+                "خطوات إدخال الدرجات على رايات بملف الإكسل",
+                "دليل رموز رايات",
+                "شرح استيراد الدرجات للبلاك بورد من ملف إكسل"
+            ],
+            regulations: [
+                "منصة ذكاء الأعمال",
+                "تعميم معالجة الغياب",
+                "تعميم مكافاة التميز",
+                "تعميم الحاقي بشأن اعتماد معالي المحافظ آلية اختيار القيادات الإشرافية في المنشأت التدريبية",
+                "الأدلة الإجرائية واللوائح والأنظمة والتعاميم",
+                "الاستراتيجيات التدريبية",
+                "الدليل الاجرائي لعضو هيئة التدريب",
+                "الدليل الاجرائي للعميد - المدير",
+                "الدليل الاجرائي لوكيل التدريب",
+                "الدليل الإرشادي للخطة التشغيلية للوحدات",
+                "دليل السياسات",
+                "دليل المستخدم لنظام الترقيات الإلكتروني",
+                "دليل بناء حقيبة الكترونية",
+                "دليل تقويم الأداء لأعضاء هيئة التدريب و شاغلي الوظائف الإشرافية",
+                "دليل رئيس القسم",
+                "دليل عضو هيئة التدريب",
+                "دليل عضو هيئة التدريب",
+                "ضوابط تقييم الأداء الوظيفي لأعضاء هيئة التدريب",
+                "اللوائح والتعاميم من منصة شؤون المدربين",
+                "آلية اختبار التدريب الذاتي",
+                "حساب الاحتياج في المنشآت التدريبية( كليات-معاهد)",
+                "بنك أسئلة قياس الرضا"
+            ],
+            trainers: [
+                "استراتيجيات التدريب",
+                "استراتيجية تقنية محاكاة التجارب العملية",
+                "الخطة التحسينية لأداء المتدربات المتعثرات",
+                "الخطة العلاجية للمتعثرات",
+                "اليه عمل لتقديم التدريب بأساليب وطرق مبتكره ودمج التقنية",
+                "انجاز عمل تقنية",
+                "انجاز عمل",
+                "تبادل الخبرات",
+                "تجربة قياس مهارات التفكير -تجربة مميزة",
+                "تقرير تطبيق تقنية الهولوجرام",
+                "تقنية samr",
+                "تلخيص النصوص والمقالات باستخدام الذكاء الاصطناعي",
+                "حصر التجارب المميزة المواد العامة",
+                "دليل تطبيق بليكرز",
+                "للتطبيق-ارتباط بسوق العمل",
+                "مدرج ليكرت قياس استطلاع رأي المتدربة عن استراتيجية التدريب",
+                "مسابقة برج هانوي",
+                "ملف الإنجاز",
+                "نتائج ربط المتدربين بسوق العمل في المقررات العامة",
+                "نموذج أفكار وتجارب مميزة ( تطبيق كاهوت )"
+            ],
+            trainees: [
+                "سجل المهارات الشخصية",
+                "الدليل الإرشادي للمتدرب",
+                "تعميم بشأن قواعد تنظيم السلوك للمتدربين والمتدربات",
+                "نموذج الاعتراض",
+                "نموذج التمرين"
+            ],
+            suggestions: [
+                "استمارة أساليب معالجة مستوى المتدربات",
+                "استمارة استراتيجيات التدريب ودمج التقنية بالتعلم ونواتج التعلم",
+                "استمارة التوجيه والإرشاد",
+                "استمارة الجلسات الارشادية و الزيارة المكتبية",
+                "استمارة تقييم برنامج تدريبي",
+                "استمارة تقييم قناة تدريبية",
+                "استمارة حصر الغائبات",
+                "الارتباط بسوق العمل",
+                "اللقاء التعريفي القبلي",
+                "حصر المتدربات المتدني مستواهن",
+                "قياس رضا استخدام الاستراتيجيات التدريبية",
+                "متابعة مشاكل التدرب الالكتروني"
+            ],
+            references: [
+                "Business Goals 1 - Teacher's Edition",
+                "Business GOALS 1 Work book",
+                "Eng 112 Student's Book + Workbook-1",
+                "Fifty Fifty - 1",
+                "المراجع الرقمية للمقررات",
+                "المنهج الجديد رياضيات",
+                "دليل التخصصات لشغل الوظائف التعليمية للبنات",
+                "دليل التخصصات لشغل الوظائف التعليمية للبنين",
+                "دليل مبادري التحليل الاحصائي",
+                "طرق تدريس اللغة الإنجليزية",
+                "كتاب إحصاء جامعة الملك سعود",
+                "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني",
+                "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني",
+                "كتاب المعلم",
+                "مصطلحات التدريب عربي - انجليزي",
+                "مقدمة في الإحصاء",
+                "مقدمة في الإحصاء جامعة الملك عبدالعزيز"
+            ]
+        };
+
+        // تهيئة الموقع عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تهيئة القوائم
+            initializeCourses();
+            initializeSolutions();
+            initializeRegulations();
+            initializeTrainers();
+            initializeTrainees();
+            initializeSuggestions();
+            initializeReferences();
+            
+            // إعداد أحداث النقر
+            setupEventListeners();
+            
+            // إعداد التنقل المتنقل
+            setupMobileNavigation();
+            
+            // إعداد تأثيرات التمرير
+            setupScrollEffects();
+            
+            // إعداد التنقل السلس للأقسام
+            setupSmoothScrolling();
+        });
+
+        // تهيئة المقررات التدريبية
+        function initializeCourses() {
+            const coursesGrid = document.querySelector('.courses-grid');
+            
+            siteData.courses.forEach(course => {
+                const courseCard = document.createElement('div');
+                courseCard.className = 'course-card';
+                courseCard.setAttribute('data-code', course.code);
+                
+                courseCard.innerHTML = `
+                    <div class="course-code">${course.code}</div>
+                    <div class="course-name">${course.name}</div>
+                `;
+                
+                coursesGrid.appendChild(courseCard);
+            });
+        }
+
+        // تهيئة المشاكل والحلول
+        function initializeSolutions() {
+            const solutionsGrid = document.getElementById('solutions-grid');
+            
+            siteData.solutions.forEach(solution => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', solution);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-tools"></i>
+                    <div>${solution}</div>
+                `;
+                
+                solutionsGrid.appendChild(iconCard);
+            });
+        }
+
+        // تهيئة اللوائح والأدلة والتعاميم
+        function initializeRegulations() {
+            const regulationsGrid = document.getElementById('regulations-grid');
+            
+            siteData.regulations.forEach(regulation => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', regulation);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-file-alt"></i>
+                    <div>${regulation}</div>
+                `;
+                
+                regulationsGrid.appendChild(iconCard);
+            });
+        }
+
+        // تهيئة نماذج المدربات
+        function initializeTrainers() {
+            const trainersGrid = document.getElementById('trainers-grid');
+            
+            siteData.trainers.forEach(trainer => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', trainer);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div>${trainer}</div>
+                `;
+                
+                trainersGrid.appendChild(iconCard);
+            });
+        }
+
+        // تهيئة نماذج المتدربات
+        function initializeTrainees() {
+            const traineesGrid = document.getElementById('trainees-grid');
+            
+            siteData.trainees.forEach(trainee => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', trainee);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-user-graduate"></i>
+                    <div>${trainee}</div>
+                `;
+                
+                traineesGrid.appendChild(iconCard);
+            });
+        }
+
+        // تهيئة الاقتراحات والنماذج
+        function initializeSuggestions() {
+            const suggestionsGrid = document.getElementById('suggestions-grid');
+            
+            siteData.suggestions.forEach(suggestion => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', suggestion);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-lightbulb"></i>
+                    <div>${suggestion}</div>
+                `;
+                
+                suggestionsGrid.appendChild(iconCard);
+            });
+        }
+
+        // تهيئة المراجع والكتب
+        function initializeReferences() {
+            const referencesGrid = document.getElementById('references-grid');
+            
+            siteData.references.forEach(reference => {
+                const iconCard = document.createElement('div');
+                iconCard.className = 'icon-card';
+                iconCard.setAttribute('data-name', reference);
+                
+                iconCard.innerHTML = `
+                    <i class="fas fa-book"></i>
+                    <div>${reference}</div>
+                `;
+                
+                referencesGrid.appendChild(iconCard);
+            });
+        }
+
+        // إعداد أحداث النقر
+        function setupEventListeners() {
+            // النقر على المقررات التدريبية
+            document.querySelectorAll('.course-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const courseCode = this.getAttribute('data-code');
+                    const course = siteData.courses.find(c => c.code === courseCode);
+                    openCourseModal(course);
+                });
+            });
+            
+            // النقر على العناصر الأخرى
+            document.querySelectorAll('.icon-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const itemName = this.getAttribute('data-name');
+                    openGeneralModal(itemName);
+                });
+            });
+            
+            // إغلاق النماذج المنبثقة
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.modal').forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                });
+            });
+            
+            // النقر خارج النموذج لإغلاقه
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = 'none';
+                }
+            });
+            
+            // النقر على خيارات المقرر
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const option = this.getAttribute('data-option');
+                    showSubOptions(option);
+                });
+            });
+            
+            // النقر على خيارات المعاينة والتحميل
+            document.querySelectorAll('.sub-option-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    handleAction(action);
+                });
+            });
+        }
+
+        // فتح نموذج المقرر
+        function openCourseModal(course) {
+            const modal = document.getElementById('courseModal');
+            const modalTitle = document.getElementById('modalCourseTitle');
+            const courseOptions = document.getElementById('courseOptions');
+            const subOptions = document.getElementById('courseSubOptions');
+            
+            modalTitle.textContent = `${course.code} - ${course.name}`;
+            
+            // إعداد خيارات المقرر
+            courseOptions.innerHTML = `
+                <div class="option-card" data-option="bag">
+                    <i class="fas fa-briefcase"></i>
+                    <div>الحقيبة التدريبية</div>
+                </div>
+                <div class="option-card" data-option="plans">
+                    <i class="fas fa-map"></i>
+                    <div>الخطط التدريبية</div>
+                </div>
+                <div class="option-card" data-option="questions">
+                    <i class="fas fa-question-circle"></i>
+                    <div>بنوك الأسئلة</div>
+                </div>
+            `;
+            
+            // إعادة إعداد أحداث النقر للخيارات الجديدة
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const option = this.getAttribute('data-option');
+                    showSubOptions(option);
+                });
+            });
+            
+            // إخفاء الخيارات الفرعية
+            subOptions.classList.remove('active');
+            
+            // إظهار النموذج
+            modal.style.display = 'flex';
+        }
+
+        // فتح النموذج العام
+        function openGeneralModal(itemName) {
+            const modal = document.getElementById('generalModal');
+            const modalTitle = document.getElementById('modalGeneralTitle');
+            
+            modalTitle.textContent = itemName;
+            modal.style.display = 'flex';
+        }
+
+        // إظهار الخيارات الفرعية
+        function showSubOptions(option) {
+            const subOptions = document.getElementById('courseSubOptions');
+            subOptions.classList.add('active');
+            
+            // يمكن هنا إضافة منطق إضافي بناءً على الخيار المحدد
+        }
+
+        // معالجة الإجراء (المعاينة أو التحميل)
+        function handleAction(action) {
+            if (action === 'preview') {
+                alert('سيتم فتح رابط المعاينة (سيتم استبداله لاحقًا)');
+            } else if (action === 'download') {
+                alert('سيبدأ التحميل (سيتم استبدال الرابط لاحقًا)');
+            }
+            
+            // إغلاق النماذج
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // إعداد التنقل المتنقل
+        function setupMobileNavigation() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // إغلاق القائمة عند النقر على رابط
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // إعداد تأثيرات التمرير
+        function setupScrollEffects() {
+            // تأثيرات للبطاقات عند الظهور
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // تطبيق التأثير على البطاقات
+            document.querySelectorAll('.course-card, .icon-card, .stat-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        }
+
+        // إعداد التنقل السلس للأقسام
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // حساب الموقع مع مراعاة شريط التنقل الثابت
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
