@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتبة المعرفة الرقمية - قسم الدراسات العامة</title>
+    <meta name="description" content="مكتبة المعرفة الرقمية - قسم الدراسات العامة بالكلية التقنية للبنات بنجران. موارد تعليمية، مقررات تدريبية، لوائح وأدلة، تجارب ناجحة">
+    <meta name="keywords" content="مكتبة رقمية, دراسات عامة, تدريب, تعليم, موارد تعليمية">
+    <meta name="author" content="قسم الدراسات العامة - الكلية التقنية للبنات بنجران">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "مكتبة المعرفة الرقمية - قسم الدراسات العامة",
+        "description": "منصة شاملة للموارد التعليمية والتدريبية لقسم الدراسات العامة بالكلية التقنية للبنات بنجران",
+        "url": "https://your-domain.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "نجران",
+            "addressCountry": "SA"
+        },
+        "department": {
+            "@type": "EducationalOrganization",
+            "name": "قسم الدراسات العامة"
+        }
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -44,6 +68,20 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* تحسين إمكانية الوصول */
+        :focus {
+            outline: 2px solid var(--accent-teal);
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
         }
 
         /* Header Styles */
@@ -101,7 +139,7 @@
             font-weight: 400;
         }
 
-        /* Navigation - التحديثات المطلوبة */
+        /* Navigation */
         nav {
             background-color: var(--white);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -131,27 +169,21 @@
             color: var(--dark-grey);
             font-weight: 700;
             padding: 10px 18px;
-            border-radius: 0; /* إزالة الحواف */
+            border-radius: 0;
             transition: var(--transition);
             position: relative;
-            background: transparent; /* خلفية شفافة */
-        }
-
-        /* إزالة جميع التأثيرات المعقدة */
-        .nav-links a::before,
-        .nav-links a::after {
-            display: none; /* إخفاء جميع العناصر الزائفة */
+            background: transparent;
         }
 
         .nav-links a:hover {
-            transform: translateY(-3px); /* حركة رفع بسيطة */
-            color: var(--teal-green); /* تغيير لون النص إلى الأخضر المزرق */
-            background: transparent; /* خلفية شفافة تماماً */
+            transform: translateY(-3px);
+            color: var(--teal-green);
+            background: transparent;
         }
 
         .nav-links a.active {
             color: var(--teal-green);
-            background: transparent; /* خلفية شفافة */
+            background: transparent;
         }
 
         .mobile-menu-btn {
@@ -168,7 +200,43 @@
             transform: scale(1.1);
         }
 
-        /* باقي الأنماط تبقى كما هي */
+        /* Search Section */
+        .search-section {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid var(--teal-green);
+            border-radius: 30px 0 0 30px;
+            font-size: 1rem;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .search-box button {
+            background: var(--teal-green);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .search-box button:hover {
+            background: var(--dark-teal);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(26, 127, 117, 0.75), rgba(42, 167, 155, 0.8)), url('https://online.uky.edu/sites/default/files/2024-08/header-library-information-science.jpg');
@@ -475,7 +543,7 @@
             padding: 35px;
             border-radius: var(--border-radius);
             width: 90%;
-            max-width: 650px;
+            max-width: 800px;
             max-height: 80vh;
             overflow-y: auto;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
@@ -558,6 +626,17 @@
             transform: translateY(-4px);
             border-color: rgba(26, 127, 117, 0.2);
             box-shadow: var(--box-shadow-hover);
+        }
+
+        /* تمييز الخيار المحدد */
+        .option-card.selected {
+            background: var(--light-accent);
+            border-color: var(--teal-green);
+            box-shadow: 0 0 0 2px var(--teal-green);
+        }
+
+        .option-card.selected i {
+            color: var(--dark-teal);
         }
 
         .option-card i {
@@ -659,6 +738,95 @@
             font-weight: 700;
         }
 
+        /* Preview Modal Styles */
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .preview-content {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            width: 95%;
+            height: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: modalAppear 0.4s ease;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: var(--teal-green);
+            color: white;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .preview-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .preview-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .preview-close:hover {
+            transform: scale(1.1);
+        }
+
+        .preview-body {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preview-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+
+        .preview-message {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--dark-grey);
+        }
+
+        .preview-message i {
+            font-size: 3rem;
+            color: var(--teal-green);
+            margin-bottom: 20px;
+        }
+
+        .preview-message h3 {
+            margin-bottom: 15px;
+            color: var(--teal-green);
+        }
+
         /* Department Message */
         .department-message {
             background: linear-gradient(rgba(26, 127, 117, 0.85), rgba(42, 167, 155, 0.9));
@@ -735,6 +903,73 @@
 
         .footer-text p {
             margin: 5px 0;
+        }
+
+        /* Notification Styles */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: var(--white);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow-hover);
+            border-right: 4px solid var(--teal-green);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.success {
+            border-right-color: #28a745;
+        }
+
+        .notification.error {
+            border-right-color: #dc3545;
+        }
+
+        .notification.warning {
+            border-right-color: #ffc107;
+        }
+
+        .close-notification {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--dark-grey);
+        }
+
+        /* Loading Screen */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--teal-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s;
+        }
+
+        .loading-content {
+            color: white;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         /* Responsive Design */
@@ -865,6 +1100,16 @@
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <p style="font-size: 1.2rem;">جاري تحميل المكتبة...</p>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -899,7 +1144,16 @@
         </div>
     </nav>
 
-    <!-- باقي المحتوى يبقى كما هو -->
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="globalSearch" placeholder="ابحث في المحتوى...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
@@ -917,7 +1171,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-book-open"></i>
                     </div>
-                    <div class="stat-number">10</div>
+                    <div class="stat-number">14</div>
                     <div class="stat-text">مقررات تدريبية</div>
                 </div>
                 <div class="stat-card">
@@ -1077,15 +1331,8 @@
             </div>
             <div class="sub-options" id="courseSubOptions">
                 <h4 style="margin-bottom: 15px; text-align: center; color: var(--teal-green); font-weight: 700;">اختر الإجراء المطلوب</h4>
-                <div class="sub-options-grid">
-                    <div class="sub-option-card" data-action="preview">
-                        <i class="fas fa-eye"></i>
-                        <div>المعاينة</div>
-                    </div>
-                    <div class="sub-option-card" data-action="download">
-                        <i class="fas fa-download"></i>
-                        <div>التحميل</div>
-                    </div>
+                <div class="sub-options-grid" id="courseActionOptions">
+                    <!-- سيتم إضافة خيارات المعاينة والتحميل ديناميكياً -->
                 </div>
             </div>
         </div>
@@ -1096,20 +1343,232 @@
         <div class="modal-content">
             <button class="close-modal">&times;</button>
             <h3 class="modal-title" id="modalGeneralTitle">خيارات العنصر</h3>
-            <div class="sub-options-grid">
-                <div class="sub-option-card" data-action="preview">
-                    <i class="fas fa-eye"></i>
-                    <div>المعاينة</div>
-                </div>
-                <div class="sub-option-card" data-action="download">
-                    <i class="fas fa-download"></i>
-                    <div>التحميل</div>
-                </div>
+            <div class="sub-options-grid" id="generalActionOptions">
+                <!-- سيتم إضافة خيارات المعاينة والتحميل ديناميكياً -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="preview-modal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <div class="preview-title" id="previewTitle">معاينة الملف</div>
+                <button class="preview-close">&times;</button>
+            </div>
+            <div class="preview-body" id="previewBody">
+                <!-- سيتم إضافة محتوى المعاينة ديناميكياً -->
             </div>
         </div>
     </div>
 
     <script>
+        // قاعدة بيانات الروابط لكل عنصر مع أنواع الملفات
+        const linksDatabase = {
+            // المقررات التدريبية
+            courses: {
+                "101احصا": {
+                    bag: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=AiH5nu",
+                        download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=AiH5nu",
+                        type: "pdf"
+                    },
+                    plans: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23", 
+                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23",
+                        type: "pdf"
+                    },
+                    questions: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2",
+                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2",
+                        type: "pdf"
+                    },
+                    presentations: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Eokge7A7vrpJgXbUoKfGQUcBbWvX1Xo9f4YTTUUbRFAWBw?e=jZvGpP",
+                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=75baefa7-48a4-4d92-9f9f-608894f60eac",
+                        type: "pdf"
+                    },
+                    enrichment: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Emn2B2Nex_VOie0BG3hIzxYBrDsX63NZMfu6fhEqU-FqHw?e=xcxyo8",
+                        download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EbFotGhOKvZGuK26F1_NJKwBvemluXX-ylOPwRMIjMv2Vw?e=gaPpqN",
+                        type: "pdf"
+                    },
+                    evaluation: {
+                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc={de1dc8d3-e079-4281-a614-f928248a0103}&amp;action=embedview",
+                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc={de1dc8d3-e079-4281-a614-f928248a0103}&amp;action=embedview",
+                        type: "pdf"
+                    }
+                },
+                "101اسلم": {
+                    bag: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://drive.google.com/uc?export=download&id=3def456ghi789jkl345",
+                        type: "pdf"
+                    },
+                    plans: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/islamic-plans.rar",
+                        type: "pdf"
+                    },
+                    questions: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/islamic-questions.rar",
+                        type: "pdf"
+                    },
+                    presentations: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/islamic-presentations.rar",
+                        type: "pdf"
+                    },
+                    enrichment: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/islamic-enrichment.rar",
+                        type: "pdf"
+                    },
+                    evaluation: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/islamic-evaluation.rar",
+                        type: "pdf"
+                    }
+                },
+                "101رياض": {
+                    bag: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://drive.google.com/uc?export=download&id=4ghi789jkl012mno678",
+                        type: "pdf"
+                    },
+                    plans: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/math-plans.rar",
+                        type: "pdf"
+                    },
+                    questions: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://drive.google.com/uc?export=download&id=5jkl012mno345pqr901",
+                        type: "pdf"
+                    },
+                    presentations: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/math-presentations.rar",
+                        type: "pdf"
+                    },
+                    enrichment: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/math-enrichment.rar",
+                        type: "pdf"
+                    },
+                    evaluation: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/math-evaluation.rar",
+                        type: "pdf"
+                    }
+                },
+                // ... باقي المقررات بنفس النمط
+                "ENGL204": {
+                    bag: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://drive.google.com/uc?export=download&id=26uvw456xyz789abc234",
+                        type: "pdf"
+                    },
+                    plans: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/english204-plans.rar",
+                        type: "pdf"
+                    },
+                    questions: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://drive.google.com/uc?export=download&id=27xyz789abc012def567",
+                        type: "pdf"
+                    },
+                    presentations: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/english204-presentations.rar",
+                        type: "pdf"
+                    },
+                    enrichment: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/english204-enrichment.rar",
+                        type: "pdf"
+                    },
+                    evaluation: {
+                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                        download: "https://example.com/english204-evaluation.rar",
+                        type: "pdf"
+                    }
+                }
+            },
+
+            // المشاكل والحلول
+            solutions: {
+                "قاعدة بيانات المشكلات والحلول": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://drive.google.com/uc?export=download&id=28abc012def345ghi890",
+                    type: "pdf"
+                },
+                "دليل بوابة التدرب الإلكتروني أعضاء هيئة التدريب": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://example.com/training-portal-guide.rar",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            },
+
+            // اللوائح والأدلة والتعاميم
+            regulations: {
+                "منصة ذكاء الأعمال": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://drive.google.com/uc?export=download&id=31jkl901mno234pqr789",
+                    type: "pdf"
+                },
+                "تعميم معالجة الغياب": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://example.com/absence-policy.rar",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            },
+
+            // نماذج المدربات
+            trainers: {
+                "استراتيجيات التدريب": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://drive.google.com/uc?export=download&id=45zab123cde456fgh901",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            },
+
+            // نماذج المتدربات
+            trainees: {
+                "سجل المهارات الشخصية": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://example.com/personal-skills-record.rar",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            },
+
+            // الاقتراحات والنماذج
+            suggestions: {
+                "استمارة أساليب معالجة مستوى المتدربات": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://example.com/student-level-form.rar",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            },
+
+            // المراجع والكتب
+            references: {
+                "Business Goals 1 - Teacher's Edition": {
+                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
+                    download: "https://drive.google.com/uc?export=download&id=57fgh789ijk012lmn567",
+                    type: "pdf"
+                },
+                // ... باقي العناصر بنفس النمط
+            }
+        };
+
         // بيانات الموقع
         const siteData = {
             courses: [
@@ -1122,7 +1581,11 @@
                 { code: "101رياد", name: "اساسيات ريادة الأعمال" },
                 { code: "ENGL101", name: "English Language 1" },
                 { code: "ENGL102", name: "English Language 2" },
-                { code: "ENGL103", name: "English Language 3" }
+                { code: "ENGL103", name: "English Language 3" },
+                { code: "ENGL111", name: "English Language 1" },
+                { code: "ENGL112", name: "English Language 2" },
+                { code: "ENGL113", name: "English Language 3" },
+                { code: "ENGL204", name: "English Language 4" }
             ],
             solutions: [
                 "قاعدة بيانات المشكلات والحلول",
@@ -1149,7 +1612,6 @@
                 "دليل بناء حقيبة الكترونية",
                 "دليل تقويم الأداء لأعضاء هيئة التدريب و شاغلي الوظائف الإشرافية",
                 "دليل رئيس القسم",
-                "دليل عضو هيئة التدريب",
                 "دليل عضو هيئة التدريب",
                 "ضوابط تقييم الأداء الوظيفي لأعضاء هيئة التدريب",
                 "اللوائح والتعاميم من منصة شؤون المدربين",
@@ -1213,7 +1675,6 @@
                 "طرق تدريس اللغة الإنجليزية",
                 "كتاب إحصاء جامعة الملك سعود",
                 "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني",
-                "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني",
                 "كتاب المعلم",
                 "مصطلحات التدريب عربي - انجليزي",
                 "مقدمة في الإحصاء",
@@ -1221,8 +1682,52 @@
             ]
         };
 
+        // متغيرات لتتبع العنصر الحالي
+        let currentCourse = null;
+        let currentOption = null;
+        let currentItem = null;
+        let currentCategory = null;
+        let currentFileInfo = null;
+
+        // دالة لإظهار الإشعارات
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <span>${message}</span>
+                <button class="close-notification">&times;</button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            // إغلاق الإشعار
+            notification.querySelector('.close-notification').addEventListener('click', () => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            });
+            
+            // إغلاق تلقائي بعد 5 ثوانٍ
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }
+            }, 5000);
+        }
+
         // تهيئة الموقع عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', function() {
+            // إخفاء شاشة التحميل
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                loading.style.opacity = '0';
+                setTimeout(() => loading.remove(), 500);
+            }, 1000);
+
             // تهيئة القوائم
             initializeCourses();
             initializeSolutions();
@@ -1243,7 +1748,81 @@
             
             // إعداد التنقل السلس للأقسام
             setupSmoothScrolling();
+            
+            // إعداد البحث
+            setupSearch();
+            
+            // إعداد Lazy Loading
+            setupLazyLoading();
+            
+            // إعداد أحداث إغلاق النماذج
+            setupModalEvents();
         });
+
+        // إعداد وظيفة البحث
+        function setupSearch() {
+            const searchInput = document.getElementById('globalSearch');
+            const searchBtn = document.getElementById('searchBtn');
+            
+            searchBtn.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    showNotification(`جاري البحث عن: "${searchTerm}"`, 'info');
+                    // هنا يمكن إضافة منطق البحث الفعلي
+                }
+            }
+        }
+
+        // إعداد Lazy Loading
+        function setupLazyLoading() {
+            const images = document.querySelectorAll('img');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+            
+            images.forEach(img => {
+                if (img.dataset.src) {
+                    imageObserver.observe(img);
+                }
+            });
+        }
+
+        // إعداد أحداث إغلاق النماذج
+        function setupModalEvents() {
+            // إغلاق النماذج المنبثقة
+            document.querySelectorAll('.close-modal, .preview-close').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.modal, .preview-modal').forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                    resetModalState();
+                });
+            });
+            
+            // النقر خارج النموذج لإغلاقه
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal') || event.target.classList.contains('preview-modal')) {
+                    event.target.style.display = 'none';
+                    resetModalState();
+                }
+            });
+        }
 
         // تهيئة المقررات التدريبية
         function initializeCourses() {
@@ -1378,6 +1957,8 @@
                 card.addEventListener('click', function() {
                     const courseCode = this.getAttribute('data-code');
                     const course = siteData.courses.find(c => c.code === courseCode);
+                    currentCourse = course;
+                    currentCategory = 'courses';
                     openCourseModal(course);
                 });
             });
@@ -1386,39 +1967,18 @@
             document.querySelectorAll('.icon-card').forEach(card => {
                 card.addEventListener('click', function() {
                     const itemName = this.getAttribute('data-name');
+                    currentItem = itemName;
+                    
+                    // تحديد الفئة بناءً على العنصر الأب
+                    const parentId = this.closest('.icons-grid').id;
+                    if (parentId === 'solutions-grid') currentCategory = 'solutions';
+                    else if (parentId === 'regulations-grid') currentCategory = 'regulations';
+                    else if (parentId === 'trainers-grid') currentCategory = 'trainers';
+                    else if (parentId === 'trainees-grid') currentCategory = 'trainees';
+                    else if (parentId === 'suggestions-grid') currentCategory = 'suggestions';
+                    else if (parentId === 'references-grid') currentCategory = 'references';
+                    
                     openGeneralModal(itemName);
-                });
-            });
-            
-            // إغلاق النماذج المنبثقة
-            document.querySelectorAll('.close-modal').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    document.querySelectorAll('.modal').forEach(modal => {
-                        modal.style.display = 'none';
-                    });
-                });
-            });
-            
-            // النقر خارج النموذج لإغلاقه
-            window.addEventListener('click', function(event) {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = 'none';
-                }
-            });
-            
-            // النقر على خيارات المقرر
-            document.querySelectorAll('.option-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const option = this.getAttribute('data-option');
-                    showSubOptions(option);
-                });
-            });
-            
-            // النقر على خيارات المعاينة والتحميل
-            document.querySelectorAll('.sub-option-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const action = this.getAttribute('data-action');
-                    handleAction(action);
                 });
             });
         }
@@ -1432,7 +1992,7 @@
             
             modalTitle.textContent = `${course.code} - ${course.name}`;
             
-            // إعداد خيارات المقرر
+            // إعداد خيارات المقرر (6 خيارات)
             courseOptions.innerHTML = `
                 <div class="option-card" data-option="bag">
                     <i class="fas fa-briefcase"></i>
@@ -1446,13 +2006,34 @@
                     <i class="fas fa-question-circle"></i>
                     <div>بنوك الأسئلة</div>
                 </div>
+                <div class="option-card" data-option="presentations">
+                    <i class="fas fa-desktop"></i>
+                    <div>العروض التقديمية</div>
+                </div>
+                <div class="option-card" data-option="enrichment">
+                    <i class="fas fa-star"></i>
+                    <div>محتوى اثرائي</div>
+                </div>
+                <div class="option-card" data-option="evaluation">
+                    <i class="fas fa-clipboard-check"></i>
+                    <div>نقد الحقيبة</div>
+                </div>
             `;
             
             // إعادة إعداد أحداث النقر للخيارات الجديدة
             document.querySelectorAll('.option-card').forEach(card => {
                 card.addEventListener('click', function() {
                     const option = this.getAttribute('data-option');
-                    showSubOptions(option);
+                    currentOption = option;
+                    showCourseSubOptions(option);
+                    
+                    // إزالة التمييز من جميع الخيارات
+                    document.querySelectorAll('.option-card').forEach(c => {
+                        c.classList.remove('selected');
+                    });
+                    
+                    // إضافة التمييز للخيار المحدد
+                    this.classList.add('selected');
                 });
             });
             
@@ -1467,30 +2048,202 @@
         function openGeneralModal(itemName) {
             const modal = document.getElementById('generalModal');
             const modalTitle = document.getElementById('modalGeneralTitle');
+            const actionOptions = document.getElementById('generalActionOptions');
             
             modalTitle.textContent = itemName;
+            
+            // إعداد خيارات المعاينة والتحميل
+            actionOptions.innerHTML = `
+                <div class="sub-option-card" data-action="preview">
+                    <i class="fas fa-eye"></i>
+                    <div>المعاينة</div>
+                </div>
+                <div class="sub-option-card" data-action="download">
+                    <i class="fas fa-download"></i>
+                    <div>التحميل</div>
+                </div>
+            `;
+            
+            // إعداد أحداث النقر للخيارات
+            document.querySelectorAll('.sub-option-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    handleGeneralAction(action);
+                });
+            });
+            
             modal.style.display = 'flex';
         }
 
-        // إظهار الخيارات الفرعية
-        function showSubOptions(option) {
+        // إظهار الخيارات الفرعية للمقرر
+        function showCourseSubOptions(option) {
             const subOptions = document.getElementById('courseSubOptions');
-            subOptions.classList.add('active');
+            const actionOptions = document.getElementById('courseActionOptions');
             
-            // يمكن هنا إضافة منطق إضافي بناءً على الخيار المحدد
+            // إعداد خيارات المعاينة والتحميل
+            actionOptions.innerHTML = `
+                <div class="sub-option-card" data-action="preview">
+                    <i class="fas fa-eye"></i>
+                    <div>المعاينة</div>
+                </div>
+                <div class="sub-option-card" data-action="download">
+                    <i class="fas fa-download"></i>
+                    <div>التحميل</div>
+                </div>
+            `;
+            
+            // إعداد أحداث النقر للخيارات
+            document.querySelectorAll('.sub-option-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    handleCourseAction(action);
+                });
+            });
+            
+            subOptions.classList.add('active');
         }
 
-        // معالجة الإجراء (المعاينة أو التحميل)
-        function handleAction(action) {
-            if (action === 'preview') {
-                alert('سيتم فتح رابط المعاينة (سيتم استبداله لاحقًا)');
-            } else if (action === 'download') {
-                alert('سيبدأ التحميل (سيتم استبدال الرابط لاحقًا)');
+        // معالجة إجراء المقرر
+        function handleCourseAction(action) {
+            if (currentCourse && currentOption) {
+                const fileInfo = linksDatabase.courses[currentCourse.code][currentOption];
+                if (fileInfo && fileInfo[action]) {
+                    currentFileInfo = fileInfo;
+                    if (action === 'preview') {
+                        openFilePreview(currentCourse.name, fileInfo);
+                    } else if (action === 'download') {
+                        downloadFile(fileInfo.download, `${currentCourse.code}_${currentOption}.${getFileExtension(fileInfo.type)}`);
+                    }
+                } else {
+                    showNotification('الرابط غير متوفر حالياً', 'error');
+                }
             }
             
             // إغلاق النماذج
             document.querySelectorAll('.modal').forEach(modal => {
                 modal.style.display = 'none';
+            });
+        }
+
+        // معالجة الإجراء العام
+        function handleGeneralAction(action) {
+            if (currentItem && currentCategory) {
+                const fileInfo = linksDatabase[currentCategory][currentItem];
+                if (fileInfo && fileInfo[action]) {
+                    currentFileInfo = fileInfo;
+                    if (action === 'preview') {
+                        openFilePreview(currentItem, fileInfo);
+                    } else if (action === 'download') {
+                        downloadFile(fileInfo.download, `${currentItem}.${getFileExtension(fileInfo.type)}`);
+                    }
+                } else {
+                    showNotification('الرابط غير متوفر حالياً', 'error');
+                }
+            }
+            
+            // إغلاق النماذج
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+        }
+
+        // فتح معاينة الملف
+        function openFilePreview(title, fileInfo) {
+            const previewModal = document.getElementById('previewModal');
+            const previewTitle = document.getElementById('previewTitle');
+            const previewBody = document.getElementById('previewBody');
+            
+            previewTitle.textContent = `معاينة: ${title}`;
+            
+            // مسح محتوى المعاينة السابق
+            previewBody.innerHTML = '';
+            
+            // التحقق من نوع الملف وعرضه بشكل مناسب
+            const fileType = fileInfo.type.toLowerCase();
+            const fileUrl = fileInfo.preview;
+            
+            if (fileType === 'pdf') {
+                // عرض PDF باستخدام OneDrive أو Google Viewer
+                previewBody.innerHTML = `<iframe class="preview-frame" src="${fileUrl}"></iframe>`;
+            } else if (['doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(fileType)) {
+                // عرض ملفات Office باستخدام Office Online
+                previewBody.innerHTML = `<iframe class="preview-frame" src="https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}"></iframe>`;
+            } else if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileType)) {
+                // عرض الصور مباشرة
+                previewBody.innerHTML = `<img src="${fileUrl}" style="max-width: 100%; max-height: 100%;" alt="${title}">`;
+            } else if (['mp4', 'webm', 'ogg'].includes(fileType)) {
+                // عرض الفيديو
+                previewBody.innerHTML = `
+                    <video controls style="max-width: 100%; max-height: 100%;">
+                        <source src="${fileUrl}" type="video/${fileType}">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                `;
+            } else {
+                // الملفات غير المدعومة للمعاينة
+                previewBody.innerHTML = `
+                    <div class="preview-message">
+                        <i class="fas fa-file-download"></i>
+                        <h3>لا يمكن معاينة هذا النوع من الملفات</h3>
+                        <p>نوع الملف: ${fileType.toUpperCase()}</p>
+                        <p>يرجى تحميل الملف لعرضه على جهازك.</p>
+                        <button class="cta-button" onclick="downloadFile('${fileInfo.download}', '${title}.${getFileExtension(fileType)}')" style="margin-top: 20px;">
+                            <i class="fas fa-download"></i> تحميل الملف
+                        </button>
+                    </div>
+                `;
+            }
+            
+            previewModal.style.display = 'flex';
+        }
+
+        // تحميل الملف
+        function downloadFile(url, filename) {
+            // إنشاء رابط تحميل مؤقت
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            showNotification('جاري تحميل الملف...', 'success');
+        }
+
+        // الحصول على امتداد الملف
+        function getFileExtension(fileType) {
+            const extensions = {
+                'pdf': 'pdf',
+                'doc': 'doc',
+                'docx': 'docx',
+                'ppt': 'ppt',
+                'pptx': 'pptx',
+                'xls': 'xls',
+                'xlsx': 'xlsx',
+                'jpg': 'jpg',
+                'jpeg': 'jpeg',
+                'png': 'png',
+                'gif': 'gif',
+                'zip': 'zip',
+                'rar': 'rar',
+                'mp4': 'mp4'
+            };
+            
+            return extensions[fileType] || 'file';
+        }
+
+        // إعادة تعيين حالة النماذج
+        function resetModalState() {
+            currentCourse = null;
+            currentOption = null;
+            currentItem = null;
+            currentCategory = null;
+            currentFileInfo = null;
+            
+            // إزالة التمييز من جميع الخيارات عند إغلاق النموذج
+            document.querySelectorAll('.option-card').forEach(c => {
+                c.classList.remove('selected');
             });
         }
 
