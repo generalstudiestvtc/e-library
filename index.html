@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتبة المعرفة الرقمية - قسم الدراسات العامة</title>
-    <meta name="description" content="مكتبة المعرفة الرقمية - قسم الدراسات العامة بالكلية التقنية للبنات بنجران. موارد تعليمية، مقررات تدريبية، لوائح وأدلة، تجارب ناجحة">
+    <meta name="description" content="مكتبة المعرفة الرقمية - قسم الدراسات العامة بالكلية التقنية للبنات بنجران. موارد تعليمية، مقرر تدريبي، لوائح وأدلة، تجارب ناجحة">
     <meta name="keywords" content="مكتبة رقمية, دراسات عامة, تدريب, تعليم, موارد تعليمية">
     <meta name="author" content="قسم الدراسات العامة - الكلية التقنية للبنات بنجران">
     
@@ -115,8 +115,8 @@
         }
 
         .logo {
-            width: 400px;
-            height: 400px;
+            width: 80px;
+            height: 80px;
             margin-left: 30px;
             filter: brightness(0) invert(1);
             transition: var(--transition);
@@ -127,14 +127,14 @@
         }
 
         .title-section h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
             font-weight: 800;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .title-section p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             opacity: 0.95;
             font-weight: 400;
         }
@@ -257,14 +257,14 @@
         }
 
         .hero h2 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 800;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
             opacity: 0.95;
         }
@@ -871,8 +871,8 @@
         }
 
         .footer-logo {
-            width: 400px;
-            height: 400px;
+            width: 80px;
+            height: 80px;
             filter: brightness(0) invert(1);
             margin-bottom: 15px;
         }
@@ -977,11 +977,6 @@
             .courses-grid, .icons-grid {
                 grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
             }
-            
-            .logo, .footer-logo {
-                width: 300px;
-                height: 300px;
-            }
         }
 
         @media (max-width: 900px) {
@@ -996,8 +991,6 @@
             }
 
             .logo, .footer-logo {
-                width: 250px;
-                height: 250px;
                 margin-left: 0;
                 margin-bottom: 10px;
             }
@@ -1091,11 +1084,6 @@
             .survey-section {
                 padding: 40px 20px;
             }
-
-            .logo, .footer-logo {
-                width: 200px;
-                height: 200px;
-            }
         }
     </style>
 </head>
@@ -1172,7 +1160,7 @@
                         <i class="fas fa-book-open"></i>
                     </div>
                     <div class="stat-number">14</div>
-                    <div class="stat-text">مقررات تدريبية</div>
+                    <div class="stat-text">مقرر تدريبي</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">
@@ -1363,209 +1351,214 @@
     </div>
 
     <script>
-        // قاعدة بيانات الروابط لكل عنصر مع أنواع الملفات
+        // قاعدة بيانات كاملة مع جميع العناصر
         const linksDatabase = {
-            // المقررات التدريبية
             courses: {
                 "101احصا": {
-                    bag: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=AiH5nu",
-                        download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=AiH5nu",
-                        type: "pdf"
-                    },
-                    plans: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23", 
-                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23",
-                        type: "pdf"
-                    },
-                    questions: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2",
-                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2",
-                        type: "pdf"
-                    },
-                    presentations: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Eokge7A7vrpJgXbUoKfGQUcBbWvX1Xo9f4YTTUUbRFAWBw?e=jZvGpP",
-                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=75baefa7-48a4-4d92-9f9f-608894f60eac",
-                        type: "pdf"
-                    },
-                    enrichment: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Emn2B2Nex_VOie0BG3hIzxYBrDsX63NZMfu6fhEqU-FqHw?e=xcxyo8",
-                        download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EbFotGhOKvZGuK26F1_NJKwBvemluXX-ylOPwRMIjMv2Vw?e=gaPpqN",
-                        type: "pdf"
-                    },
-                    evaluation: {
-                        preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc={de1dc8d3-e079-4281-a614-f928248a0103}&amp;action=embedview",
-                        download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc={de1dc8d3-e079-4281-a614-f928248a0103}&amp;action=embedview",
-                        type: "pdf"
-                    }
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "101اسلم": {
-                    bag: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://drive.google.com/uc?export=download&id=3def456ghi789jkl345",
-                        type: "pdf"
-                    },
-                    plans: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/islamic-plans.rar",
-                        type: "pdf"
-                    },
-                    questions: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/islamic-questions.rar",
-                        type: "pdf"
-                    },
-                    presentations: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/islamic-presentations.rar",
-                        type: "pdf"
-                    },
-                    enrichment: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/islamic-enrichment.rar",
-                        type: "pdf"
-                    },
-                    evaluation: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/islamic-evaluation.rar",
-                        type: "pdf"
-                    }
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "101رياض": {
-                    bag: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://drive.google.com/uc?export=download&id=4ghi789jkl012mno678",
-                        type: "pdf"
-                    },
-                    plans: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/math-plans.rar",
-                        type: "pdf"
-                    },
-                    questions: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://drive.google.com/uc?export=download&id=5jkl012mno345pqr901",
-                        type: "pdf"
-                    },
-                    presentations: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/math-presentations.rar",
-                        type: "pdf"
-                    },
-                    enrichment: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/math-enrichment.rar",
-                        type: "pdf"
-                    },
-                    evaluation: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/math-evaluation.rar",
-                        type: "pdf"
-                    }
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
-                // ... باقي المقررات بنفس النمط
+                "101عربي": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "101فيزي": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "101اسلك": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "101رياد": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL101": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL102": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL103": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL111": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL112": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
+                "ENGL113": {
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                },
                 "ENGL204": {
-                    bag: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://drive.google.com/uc?export=download&id=26uvw456xyz789abc234",
-                        type: "pdf"
-                    },
-                    plans: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/english204-plans.rar",
-                        type: "pdf"
-                    },
-                    questions: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://drive.google.com/uc?export=download&id=27xyz789abc012def567",
-                        type: "pdf"
-                    },
-                    presentations: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/english204-presentations.rar",
-                        type: "pdf"
-                    },
-                    enrichment: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/english204-enrichment.rar",
-                        type: "pdf"
-                    },
-                    evaluation: {
-                        preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                        download: "https://example.com/english204-evaluation.rar",
-                        type: "pdf"
-                    }
+                    bag: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "#", download: "#", type: "pdf" },
+                    questions: { preview: "#", download: "#", type: "pdf" },
+                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    evaluation: { preview: "#", download: "#", type: "pdf" }
                 }
             },
-
-            // المشاكل والحلول
             solutions: {
-                "قاعدة بيانات المشكلات والحلول": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://drive.google.com/uc?export=download&id=28abc012def345ghi890",
-                    type: "pdf"
-                },
-                "دليل بوابة التدرب الإلكتروني أعضاء هيئة التدريب": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://example.com/training-portal-guide.rar",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "قاعدة بيانات المشكلات والحلول": { preview: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/ESH100A-N-9FqABsDSvJlrcBQzpOqPqEv1csidtIKQ51FA?e=NbfRrV", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/ESH100A-N-9FqABsDSvJlrcBQzpOqPqEv1csidtIKQ51FA?e=NbfRrV", type: "xlsx" },
+                "دليل بوابة التدرب الإلكتروني أعضاء هيئة التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=132eacdf-b8a5-4d1e-8e8e-9d4c27f874dd", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ed-sLhOluB5Njo6dTCf4dN0BAH3vZB4v71X9d2Ln1QYnQg?e=nOX12B", type: "pdf" },
+                "تطبيق استيراد اختبار أو مخزن أسئلة من ملف إكسل إلى البلاك بورد": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a8e39c91-d1da-4526-9082-ec98cc19db60", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZGc46ja0SZFkILsmMwZ22ABaJSMCfYB2IasTEmnnCxQHQ?e=WEpv6i", type: "pdf" },
+                "حل مشكلة تعليق البلاك بورد": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a8e39c91-d1da-4526-9082-ec98cc19db60", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EY-fFJS-5P9BkBMwYPrHyY8Bt0gyRcgj1O_Wk3_0kT2UzQ?e=cSOfS6", type: "pdf" },
+                "خطوات إدخال الدرجات على رايات بملف الإكسل": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=05a361e0-ef91-40fa-88d8-174a614f5e41", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EeBhowWR7_pAiNgXSmFPXkEB9cbXLvLBXwc8Tm7IDVVMDg?e=BibW4E", type: "pdf" },
+                "دليل رموز رايات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=1b2f16e4-ae3b-4cc3-82d2-408e537f1fcd", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EeBhowWR7_pAiNgXSmFPXkEB9cbXLvLBXwc8Tm7IDVVMDg?e=BibW4E", type: "pdf" },
+                "شرح استيراد الدرجات للبلاك بورد من ملف إكسل": { preview: "https://mttvtcedu-my.sharepoint.com/personal/falmasaabi_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=80043f05-0661-4546-8a05-3a082372b6ec&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create", download: "https://mttvtcedu-my.sharepoint.com/personal/falmasaabi_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=80043f05-0661-4546-8a05-3a082372b6ec&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create", type: "pdf" }
             },
-
-            // اللوائح والأدلة والتعاميم
             regulations: {
-                "منصة ذكاء الأعمال": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://drive.google.com/uc?export=download&id=31jkl901mno234pqr789",
-                    type: "pdf"
-                },
-                "تعميم معالجة الغياب": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://example.com/absence-policy.rar",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "منصة ذكاء الأعمال": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9acb30d6-48e7-4876-8f85-3d1bcafbc936", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdYwy5rnSHZIj4U9G8r7yTYBPOuuDt68K54NbYwjX38wEQ?e=w0gMGg", type: "pdf" },
+                "تعميم معالجة الغياب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=8bb93aa0-cd11-4efd-a71a-10adb5ef1a10", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EaA6uYsRzf1OpxoQrbXvGhABThGjAQy_N7YSlMi1_uy50Q?e=emaYJf", type: "pdf" },
+                "تعميم مكافاة التميز": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=1b550c9e-ac02-4377-8d46-fbd950c2995d", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZ4MVRsCrHdDjUb72VDCmV0BCvbjDTdQFYKuuqh8CVopHQ?e=4Dw8wM", type: "pdf" },
+                "تعميم الحاقي بشأن اعتماد معالي المحافظ آلية اختيار القيادات الإشرافية في المنشأت التدريبية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ba104dc8-19aa-4e0a-8074-67afe6ff043b", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EchNELqqGQpOgHRnr-b_BDsBmXunOk--6qPdheHY2NlgjQ?e=1ZAwCx", type: "pdf" },
+                "الأدلة الإجرائية واللوائح والأنظمة والتعاميم": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d2b8e3f5-6b3c-42a3-8509-31657e8b0111", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EfXjuNI8a6NChQkxZX6LAREBnYqrQTh21_LJox5snVHkwQ?e=bHnr2B", type: "pdf" },
+                "الاستراتيجيات التدريبية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=7bdcbd34-fcef-45fd-9ca4-eea2df4aec11", download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d2b8e3f5-6b3c-42a3-8509-31657e8b0111", type: "pdf" },
+                "الدليل الاجرائي لعضو هيئة التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ba104dc8-19aa-4e0a-8074-67afe6ff043b", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYFwHlO-SPRBvbIGO4iSIlsBSE9yQkpGeKrFiQ5mJsjBqw?e=opEnqa", type: "pdf" },
+                "الدليل الاجرائي للعميد - المدير": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=8d4bfced-bf6f-499d-9472-3fd85fb9a26d", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ee38S41vv51JlHI_2F-5om0BVPQrhAyBOGb1bH4sP4sIqg?e=HLtfNZ", type: "pdf" },
+                "الدليل الاجرائي لوكيل التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=02092ff7-1414-4455-8abc-7d4eb5c28f2d", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EfcvCQIUFFVEirx9TrXCjy0Bxgmv7w7o7fHe5hSyc_LfAQ?e=HLg7MA", type: "pdf" },
+                "الدليل الإرشادي للخطة التشغيلية للوحدات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=bf23d11c-e1a0-42d3-9417-36d83ce5e4e9", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ERzRI7-g4dNClBc22Dzl5OkBvrBTIEqeRU31KFraZCVKAA?e=hLD9sd", type: "pdf" },
+                "دليل السياسات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=0350557f-050d-4de8-9229-5fcadc6f5b46", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EX9VUAMNBehNkilfytxvW0YBTHHeKdOOAh7NeigCS7fS7g?e=xNDfrY", type: "pdf" },
+                "دليل المستخدم لنظام الترقيات الإلكتروني": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=f030c7db-acd1-4c61-a9a0-59cf23af7c5d", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdvHMPDRrGFMqaBZzyOvfF0BKfSfCWWdgVXiIhXFbKle3A?e=2pUFuP", type: "pdf" },
+                "دليل بناء حقيبة الكترونية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a6d32588-ccfa-4ad7-a6b7-7dd546a46391", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYgl06b6zNdKprd91UakY5EBeAgJjASZlGVgjf-lrfybKw?e=Pm9l42", type: "pdf" },
+                "دليل تقويم الأداء لأعضاء هيئة التدريب و شاغلي الوظائف الإشرافية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=5eff9e72-8c20-420b-8ddc-d00d414cd9db", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EXKe_14gjAtCjdzQDUFM2dsBT5PLU--D5GE8iWyhzOLZnQ?e=lcv6MF", type: "pdf" },
+                "دليل رئيس القسم": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=31cfb3b2-e76c-4886-91c5-4a702145b901", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EbKzzzFs54ZIkcVKcCFFuQEBpjEze-LV3ZU5X6UWKtf2hA?e=ieCJOy", type: "pdf" },
+                "دليل عضو هيئة التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=77f701d6-bae8-4b44-8084-726d9928ad0a", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdYB93foukRLgIRybZkorQoBpjqRmtaNjboKeBLiM7bF7A?e=OLd8Ah", type: "pdf" },
+                "ضوابط تقييم الأداء الوظيفي لأعضاء هيئة التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=efd0428a-af21-4070-8603-7bba76f9d3db", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYpC0O8hr3BAhgN7unb509sB3JsVR6ACl8cbBs-y9dViNA?e=llBWKO", type: "pdf" },
+                "اللوائح والتعاميم من منصة شؤون المدربين": { preview: "https://tvtc.gov.sa/ar/Departments/tvtcdepartments/tadreeb/Pages/Documents.aspx", download: "https://tvtc.gov.sa/ar/Departments/tvtcdepartments/tadreeb/Pages/Documents.aspx", type: "pdf" },
+                "آلية اختبار التدريب الذاتي": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=aaf9dc12-b8f7-4c64-b759-e94115967e08", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ERLc-ar3uGRMt1npQRWWfggBUw2ma3tQAQwFH6AwgTH5eQ?e=OqLOPC", type: "pdf" },
+                "حساب الاحتياج في المنشآت التدريبية( كليات-معاهد)": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=e8f33663-f3ea-49a9-b96e-6255a54911bb", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EWM28-jq86lJuW5iVaVJEbsB-_9J4LPoKm6h44VHHnqq_g?e=7GK9DG", type: "pdf" },
+                "بنك أسئلة قياس الرضا": { preview: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EfNcSQtZXPVGk7eW9_37fzYBe4uZZcN6spK4Crai6SJA1Q?e=ujIFa8", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EfNcSQtZXPVGk7eW9_37fzYBe4uZZcN6spK4Crai6SJA1Q?e=ujIFa8", type: "pdf" }
             },
-
-            // نماذج المدربات
             trainers: {
-                "استراتيجيات التدريب": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://drive.google.com/uc?export=download&id=45zab123cde456fgh901",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "استراتيجيات التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/f_alyami_tvtc_gov_sa/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ff%5Falyami%5Ftvtc%5Fgov%5Fsa%2FDocuments%2F%D8%B1%D8%A6%D8%A7%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B3%D9%85%20%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D9%A4%D9%A6%2F%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%84%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D9%A1%D9%A4%D9%A4%D9%A6%40%2F%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%84%D9%85%D8%AF%D8%B1%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B3%D9%85&ga=1", download: "https://mttvtcedu-my.sharepoint.com/personal/f_alyami_tvtc_gov_sa/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ff%5Falyami%5Ftvtc%5Fgov%5Fsa%2FDocuments%2F%D8%B1%D8%A6%D8%A7%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B3%D9%85%20%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D9%A4%D9%A6%2F%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%84%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%AF%D8%B1%D8%A7%D8%B3%D9%8A%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A%D9%A1%D9%A4%D9%A4%D9%A6%40%2F%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D8%AF%D8%B1%D9%8A%D8%A8%20%D9%84%D9%85%D8%AF%D8%B1%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%82%D8%B3%D9%85&ga=1", type: "pdf" },
+                "استراتيجية تقنية محاكاة التجارب العملية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=63f693a9-65b0-414b-b4ff-f646ce295df2", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EamT9mOwZUtBtP_2Rs4pXfIBojV50-GB-RG-kdsjNq2l0g?e=HzqQQl", type: "pdf" },
+                "الخطة التحسينية لأداء المتدربات المتعثرات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c57c27d8-d764-4006-ab11-5807b7e6e663", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdgnfMVk1wZAqxFYB7fm5mMB5gz9oNGWi5mB1Fdvs0vC9g?e=Fzn5F6", type: "pdf" },
+                "الخطة العلاجية للمتعثرات": { preview: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EY5plyxG5MtHh8mcqr22cFQBMtG73tgKkNDtbrh3cuLLAA?e=hYCmtR", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EY5plyxG5MtHh8mcqr22cFQBMtG73tgKkNDtbrh3cuLLAA?e=hYCmtR", type: "pdf" },
+                "اليه عمل لتقديم التدريب بأساليب وطرق مبتكره ودمج التقنية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9795db87-b242-4f97-83d8-73560ae82809", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYfblZdCspdPg9hzVgroKAkBoQ2TEIGHTAYTHyUETPcqlw?e=kWqNk1", type: "pdf" },
+                "انجاز عمل تقنية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=98178790-54b3-4ee0-a9da-c3c41cecfeae", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZCHF5izVOBOqdrDxBzs_q4BTZBe125SuwQXsv0xIeddkQ?e=HQozUt", type: "pdf" },
+                "انجاز عمل": { preview: "https://mttvtcedu-my.sharepoint.com/:w:/r/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc=%7BC66EDC36-BB10-4B01-BFF3-2F68DC61283A%7D&file=%D8%A7%D9%86%D8%AC%D8%A7%D8%B2%20%D8%B9%D9%85%D9%84.docx&action=default&mobileredirect=true", download: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/ETbcbsYQuwFLv_MvaNxhKDoB8Tufc4Uwm9equVKOrreFNg?e=pQy9gL", type: "pdf" },
+                "تبادل الخبرات": { preview: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/f_alyami_tvtc_gov_sa/EviPMCLn_GtCqNdd9QKmeqoB0M-hUv6Knd9UlXAyki_8PQ?e=S8X9aL", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/f_alyami_tvtc_gov_sa/EviPMCLn_GtCqNdd9QKmeqoB0M-hUv6Knd9UlXAyki_8PQ?e=S8X9aL", type: "pdf" },
+                "تجربة قياس مهارات التفكير -تجربة مميزة": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=bd92cd71-c2a9-412c-bf4d-c9b4fac0517c", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EXHNkr2pwixBv03JtPrAUXwBLdKDVWb0_BoNsfJNXazeQA?e=aT7xmT", type: "pdf" },
+                "تقرير تطبيق تقنية الهولوجرام": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=141c0841-56d4-44aa-9443-4ae4e7aed927", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EUEIHBTUVqpElENK5Oeu2ScB2ARB0YEw5dSyiBhOeEF-zg?e=fkVMgb", type: "pdf" },
+                "تقنية samr": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d5c787bd-b91e-475e-8b2a-cba389b318ac", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Eb2Hx9UeuV5HiyrLo4mzGKwBLSN8lJ5y1RltsAiNwoqDug?e=HSuzN6", type: "pdf" },
+                "تلخيص النصوص والمقالات باستخدام الذكاء الاصطناعي": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ccf32999-ca82-42ec-92a9-012c8cd03faa", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZkp88yCyuxCkqkBLIzQP6oBYkJqQ_8qOt6Kv6cvjBEIoA?e=EWMVqu", type: "pdf" },
+                "حصر التجارب المميزة المواد العامة": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=76d78e6b-1129-4d77-a306-64787b12ccaa", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EWuO13YpEXdNowZkeHsSzKoBpf4Bsu7m0tot_chwu_G-Lw?e=kTth2D", type: "pdf" },
+                "دليل تطبيق بليكرز": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3e1c6cfb-fb35-46ed-ba4c-02a835864e00", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EftsHD41--1GukwCqDWGTgABlSSC7v0Xl04m-hjkIjryzw?e=fJqWFo", type: "pdf" },
+                "للتطبيق-ارتباط بسوق العمل": { preview: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EQfVlLaG1OlCu9NnMR4eaecBSEx58x5NKWHRXKwcVcwEgQ?e=v9k20v", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EQfVlLaG1OlCu9NnMR4eaecBSEx58x5NKWHRXKwcVcwEgQ?e=v9k20v", type: "pdf" },
+                "مدرج ليكرت قياس استطلاع رأي المتدربة عن استراتيجية التدريب": { preview: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EWLP47skw7dIlBVV2sXVdy8BhGFXeAvML_JjwpqLRkBEdw?e=8gewGH", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EWLP47skw7dIlBVV2sXVdy8BhGFXeAvML_JjwpqLRkBEdw?e=8gewGH", type: "pdf" },
+                "مسابقة برج هانوي": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=18c8a679-b6eb-4227-b0a8-030b53ec6909", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EXmmyBjrtidCsKgDC1PsaQkBJpnDjRp16WsPK73_q6gO3w?e=8AOHvf", type: "pdf" },
+                "ملف الإنجاز": { preview: "https://mttvtcedu-my.sharepoint.com/:p:/r/personal/shorog_a_tvtc_gov_sa/_layouts/15/Doc.aspx?sourcedoc=%7B53C0AC56-CB59-4273-B4BA-1528C6F8BD9E%7D&file=%D9%85%D9%84%D9%81%20%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D8%A7%D8%B2.pptx&action=edit&mobileredirect=true", download: "https://mttvtcedu-my.sharepoint.com/:p:/g/personal/shorog_a_tvtc_gov_sa/EVaswFNZy3NCtLoVKMb4vZ4BqKAnC8yKwWi-UQdpvqDxZw?e=6e7xyD", type: "pdf" },
+                "نتائج ربط المتدربين بسوق العمل في المقررات العامة": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a6f79f58-5c76-40eb-a3bc-c50861720fd6", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EVif96Z2XOtAo7zFCGFyD9YB0rCXOoQImMnSYGqyBtL1yg?e=1ggWJi", type: "pdf" },
+                "نموذج أفكار وتجارب مميزة ( تطبيق كاهوت )": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d008a685-b1af-4272-8eba-1ae86cec42ea", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYWmCNCvsXJCjroa6GzsQuoBOy-6YUQ9G6PAYIy-TTTikg?e=Dq4QgX", type: "pdf" }
             },
-
-            // نماذج المتدربات
             trainees: {
-                "سجل المهارات الشخصية": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://example.com/personal-skills-record.rar",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "سجل المهارات الشخصية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9cf2945a-f5ce-4cba-ad24-73ac24b10326", download: "https://mttvtcedu-my.sharepoint.com/:x:/g/personal/shorog_a_tvtc_gov_sa/EWLP47skw7dIlBVV2sXVdy8BhGFXeAvML_JjwpqLRkBEdw?e=8gewGH", type: "pdf" },
+                "الدليل الإرشادي للمتدرب": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=60182bd1-082f-4c1e-8e5a-70eaef91f477", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdErGGAvCB5Mjlpw6u-R9HcB0jPFAmgHgtGZ8V4QlqTBQA?e=7SieP6", type: "pdf" },
+                "تعميم بشأن قواعد تنظيم السلوك للمتدربين والمتدربات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=bf504f14-f5f6-4bca-a0c4-49b1e1ecaeb2", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ERRPUL_29cpLoMRJseHsrrIBZpOuOJQNYtMFzPKjX2XK4Q?e=GtZieV", type: "pdf" },
+                "نموذج الاعتراض": { preview: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EZ3H25zXrkNHshlFZU7XRcsBcVHCUJi42wfCVOTDfHGngQ?e=3vLfpE", download: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EZ3H25zXrkNHshlFZU7XRcsBcVHCUJi42wfCVOTDfHGngQ?e=3vLfpE", type: "pdf" },
+                "نموذج التمرين": { preview: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EZ3H25zXrkNHshlFZU7XRcsBcVHCUJi42wfCVOTDfHGngQ?e=3vLfpE", download: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EZ3H25zXrkNHshlFZU7XRcsBcVHCUJi42wfCVOTDfHGngQ?e=3vLfpE", type: "pdf" }
             },
-
-            // الاقتراحات والنماذج
             suggestions: {
-                "استمارة أساليب معالجة مستوى المتدربات": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://example.com/student-level-form.rar",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "استمارة أساليب معالجة مستوى المتدربات": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQ0U1NVdWNzI0N1hDVFNHSTczRFVETEM3WCQlQCNjPTEu&sharetoken=FFySwhuMgMJ8PQBgqwUE", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQ0U1NVdWNzI0N1hDVFNHSTczRFVETEM3WCQlQCNjPTEu&sharetoken=FFySwhuMgMJ8PQBgqwUE", type: "pdf" },
+                "استمارة استراتيجيات التدريب ودمج التقنية بالتعلم ونواتج التعلم": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQlFCTUJDVldKMVRRQjBWQVkyV1VYMFE0MCQlQCNjPTEu&sharetoken=u3WKPxkFoqC0TpO5HDBb", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQlFCTUJDVldKMVRRQjBWQVkyV1VYMFE0MCQlQCNjPTEu&sharetoken=u3WKPxkFoqC0TpO5HDBb", type: "pdf" },
+                "استمارة التوجيه والإرشاد": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UREJVSUVGRzg1VDhCNjQzNzE2M0xUVkZXMiQlQCNjPTEu&sharetoken=O4BV75FLQYzTz38rRLI5", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UREJVSUVGRzg1VDhCNjQzNzE2M0xUVkZXMiQlQCNjPTEu&sharetoken=O4BV75FLQYzTz38rRLI5", type: "pdf" },
+                "استمارة الجلسات الارشادية و الزيارة المكتبية": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQTBHVkUyRUJaUjNSTUVQQU40SzZSRlA5MiQlQCNjPTEu&sharetoken=KOMEb6DOUZF3NixLzQuz", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQTBHVkUyRUJaUjNSTUVQQU40SzZSRlA5MiQlQCNjPTEu&sharetoken=KOMEb6DOUZF3NixLzQuz", type: "pdf" },
+                "استمارة تقييم برنامج تدريبي": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UNFA2NkJOSlpWMFFLTTlCRkMxMlJLU0I3NCQlQCNjPTEu&sharetoken=ca1pGjw6fHE9JPHnrA0N", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UNFA2NkJOSlpWMFFLTTlCRkMxMlJLU0I3NCQlQCNjPTEu&sharetoken=ca1pGjw6fHE9JPHnrA0N", type: "pdf" },
+                "استمارة تقييم قناة تدريبية": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UOVIwMERWU0haTVRZUTFBWEwzSjNKOEVPNyQlQCNjPTEu&sharetoken=7KYH5EdpSGBPXrEr9QTR", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UOVIwMERWU0haTVRZUTFBWEwzSjNKOEVPNyQlQCNjPTEu&sharetoken=7KYH5EdpSGBPXrEr9QTR", type: "pdf" },
+                "استمارة حصر الغائبات": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UN0o4V01XTllZMFNDQ0RHVFVPRlBHTFBWNCQlQCNjPTEu&sharetoken=XafIfliuXrpjubCefJWX", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UN0o4V01XTllZMFNDQ0RHVFVPRlBHTFBWNCQlQCNjPTEu&sharetoken=XafIfliuXrpjubCefJWX", type: "pdf" },
+                "الارتباط بسوق العمل": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5URjQ2WUtFQUVNSkM3VFoyTE45S1lGTVFMVCQlQCNjPTEu&sharetoken=2NSD8gFuBUVcdAxrlV8V", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5URjQ2WUtFQUVNSkM3VFoyTE45S1lGTVFMVCQlQCNjPTEu&sharetoken=2NSD8gFuBUVcdAxrlV8V", type: "pdf" },
+                "اللقاء التعريفي القبلي": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQzU3OU1IUVU1U1hLQ0g4UDQ0UEtNVVMxTC4u&sharetoken=GiNDmTCmP4x4Sdfs39HI", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQzU3OU1IUVU1U1hLQ0g4UDQ0UEtNVVMxTC4u&sharetoken=GiNDmTCmP4x4Sdfs39HI", type: "pdf" },
+                "حصر المتدربات المتدني مستواهن": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5URTA1MFQ0U1RET0dYSjJTQVJQSFdORExHSCQlQCNjPTEu&sharetoken=6iOdYamt0CfxJplZEU9y", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5URTA1MFQ0U1RET0dYSjJTQVJQSFdORExHSCQlQCNjPTEu&sharetoken=6iOdYamt0CfxJplZEU9y", type: "pdf" },
+                "قياس رضا استخدام الاستراتيجيات التدريبية": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UMURIOFNMNDlCSTZEMkkzQUJFVk01WTdYSSQlQCNjPTEu&sharetoken=XKHWr5m335VRdWDmBtSE", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UMURIOFNMNDlCSTZEMkkzQUJFVk01WTdYSSQlQCNjPTEu&sharetoken=XKHWr5m335VRdWDmBtSE", type: "pdf" },
+                "متابعة مشاكل التدرب الالكتروني": { preview: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQURTUVFUUzlJOUgwM0s4T0JJR1lHUk9UTSQlQCNjPTEu&sharetoken=HpyXDqfzJsDsfAMa38OK", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQURTUVFUUzlJOUgwM0s4T0JJR1lHUk9UTSQlQCNjPTEu&sharetoken=HpyXDqfzJsDsfAMa38OK", type: "pdf" }
             },
-
-            // المراجع والكتب
             references: {
-                "Business Goals 1 - Teacher's Edition": {
-                    preview: "https://onedrive.live.com/embed?resid=YOUR_FILE_ID&authkey=YOUR_AUTH_KEY",
-                    download: "https://drive.google.com/uc?export=download&id=57fgh789ijk012lmn567",
-                    type: "pdf"
-                },
-                // ... باقي العناصر بنفس النمط
+                "Business Goals 1 - Teacher's Edition": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=4978a0cf-e56a-47b9-8f92-4aa9e0fcbe10", download: "https://forms.office.com/Pages/ShareFormPage.aspx?id=t2SN3tp5mEGAwnuENDSDT2NolQ8mPOpBlpfpKECLCT5UQURTUVFUUzlJOUgwM0s4T0JJR1lHUk9UTSQlQCNjPTEu&sharetoken=HpyXDqfzJsDsfAMa38OK", type: "pdf" },
+                "Business GOALS 1 Work book": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=2eb30db0-76f5-41ab-81f0-943ef6866125", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EbANsy71dqtBgfCUPvaGYSUB3aHZkqheyGYS4M_NFf_-QA?e=qFrNhP", type: "pdf" },
+                "Eng 112 Student's Book + Workbook-1": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=8039721d-37e4-4528-9973-fc30525b5b92", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ER1yOYDkNyhFmXP8MFJbW5IBRKEGylbX7-LqTsoZaom1JA?e=Msomvr", type: "pdf" },
+                "Fifty Fifty - 1": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=448d7fd6-7b13-4d28-8976-243a46b4fce5", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdZ_jUQTeyhNiXYkOka0_OUBIcvMibxSyovFDseqK5TNcA?e=07ryd5", type: "pdf" },
+                "المراجع الرقمية للمقررات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9e872990-5a8f-4fd2-b510-eb9afd014f2c", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZAph56PWtJPtRDrmv0BTywBwv6gqdUNyaSBTs9us5HDQQ?e=Prflod", type: "pdf" },
+                "المنهج الجديد رياضيات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=dfe414d1-49d8-4f24-8692-696ae2ba53f8", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EdEU5N_YSSRPhpJpauK6U_gBfC_q4FHUQuuDBy01NSIq7g?e=ynDZlt", type: "pdf" },
+                "دليل التخصصات لشغل الوظائف التعليمية للبنات": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=0886cae2-01e1-46db-a683-aaee04618666", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EeLKhgjhAdtGpoOq7gRhhmYBTtTOpecYcOvIRCw8-3oiQA?e=PYRyF2", type: "pdf" },
+                "دليل التخصصات لشغل الوظائف التعليمية للبنين": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=acc28df7-2550-4bd4-a398-996e9627d1ce", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EfeNwqxQJdRLo5iZbpYn0c4BusE4QFgDhRf2XdfZkgZroQ?e=XIVj6u", type: "pdf" },
+                "دليل مبادئ التحليل الاحصائي": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=6f21deea-bc35-4406-9239-6b8edabaac0f", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EQYb4QFYh0RHsU9IF5FC4jgBtW1MPiNisDotwyaXSjkO5A?e=aZZL8P", type: "pdf" },
+                "طرق تدريس اللغة الإنجليزية": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=01e11b06-8758-4744-b14f-48179142e238", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EereIW81vAZEkjlrjtq6rA8BFRYJ0834woqpG045tz2XkQ?e=Qnybmo", type: "pdf" },
+                "كتاب إحصاء جامعة الملك سعود": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=23eeac8f-23dd-4ca6-bd2f-282c6d8afb2e", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EY-s7iPdI6ZMvS8oLG2K-y4B8gq7EpT2PoEgh0JaAiOuWg?e=BlyhqH", type: "pdf" },
+                "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=35ba863a-7886-42e3-b532-17c3e0eaedf4", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ETqGujWGeONCtTIXw-Dq7fQBGKGtUAKgsNVGkBipSxWmyQ?e=0wcKmI", type: "pdf" },
+                "كتاب المعلم Fifty Fifty": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=42f02e96-7e74-4741-b207-9e0c754aceac", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EZYu8EJ0fkFHsgeeDHVKzqwB1kdv8fCOs9ndxMtMF4Vdww?e=5HDe9l", type: "pdf" },
+                "مصطلحات التدريب عربي - انجليزي": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=360a7f25-1859-4a10-a621-33196fd101ba", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ESV_CjZZGBBKpiEzGW_RAboB1wjbebGeEkZf7ORR3cHszA?e=UXszGZ", type: "pdf" },
+                "مقدمة في الإحصاء": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=e06ce908-57c3-42db-b84a-cac79556349a", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EQjpbODDV9tCuErKx5VWNJoBAEWOmiwGjnXn1LlDjCDAnQ?e=D0uNJR", type: "pdf" },
+                "مقدمة في الإحصاء جامعة الملك عبدالعزيز": { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=30236317-0e26-44a3-accb-30d6b490268f", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ERdjIzAmDqNErMsw1rSQJo8B51rKaMXMgOTVxr1YNt8mfw?e=hLoHtB", type: "pdf" }
             }
         };
 
@@ -1671,11 +1664,11 @@
                 "المنهج الجديد رياضيات",
                 "دليل التخصصات لشغل الوظائف التعليمية للبنات",
                 "دليل التخصصات لشغل الوظائف التعليمية للبنين",
-                "دليل مبادري التحليل الاحصائي",
+                "دليل مبادئ التحليل الاحصائي",
                 "طرق تدريس اللغة الإنجليزية",
                 "كتاب إحصاء جامعة الملك سعود",
                 "كتاب الإحصاء المؤسسة العامة للتدريب التقني والمهني",
-                "كتاب المعلم",
+                "كتاب المعلم Fifty Fifty",
                 "مصطلحات التدريب عربي - انجليزي",
                 "مقدمة في الإحصاء",
                 "مقدمة في الإحصاء جامعة الملك عبدالعزيز"
