@@ -115,8 +115,8 @@
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 240px;
+            height: 240px;
             margin-left: 30px;
             filter: brightness(0) invert(1);
             transition: var(--transition);
@@ -814,6 +814,7 @@
             text-align: center;
             padding: 40px 20px;
             color: var(--dark-grey);
+            width: 100%;
         }
 
         .preview-message i {
@@ -871,8 +872,8 @@
         }
 
         .footer-logo {
-            width: 80px;
-            height: 80px;
+            width: 240px;
+            height: 240px;
             filter: brightness(0) invert(1);
             margin-bottom: 15px;
         }
@@ -972,6 +973,77 @@
             margin-bottom: 20px;
         }
 
+        /* Coming Soon Styles */
+        .coming-soon {
+            position: relative;
+        }
+
+        .coming-soon::after {
+            content: "قريباً";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--teal-green);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        /* Download Button Styles */
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            background: var(--teal-green);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            margin-top: 15px;
+            gap: 8px;
+        }
+
+        .download-link:hover {
+            background: var(--dark-teal);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        /* Error Message Styles */
+        .error-message {
+            background: var(--light-accent);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            border-left: 5px solid var(--teal-green);
+            box-shadow: var(--box-shadow);
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            color: var(--teal-green);
+            margin-bottom: 20px;
+        }
+
+        .error-title {
+            color: var(--teal-green);
+            margin-bottom: 15px;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        .error-description {
+            color: var(--dark-grey);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
         /* Responsive Design */
         @media (max-width: 1100px) {
             .courses-grid, .icons-grid {
@@ -991,6 +1063,8 @@
             }
 
             .logo, .footer-logo {
+                width: 180px;
+                height: 180px;
                 margin-left: 0;
                 margin-bottom: 10px;
             }
@@ -1083,6 +1157,11 @@
 
             .survey-section {
                 padding: 40px 20px;
+            }
+
+            .logo, .footer-logo {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -1355,116 +1434,116 @@
         const linksDatabase = {
             courses: {
                 "101احصا": {
-                    bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
-                    presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                   bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b20b2384-9df7-4423-b6d9-0ba34ae52cd8", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=tx69zR", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EUBRQmnvGoFItoFDoaogbSMBu9OEXmMFSso49Gd7fys5UA?e=53jMma", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/ETWGnEimDbxJt7eYdDLd1fIBy8ponr5tz0dM5EQF8RAMXA?e=nO5CMs", type: "pdf" },
+                    presentations: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=75baefa7-48a4-4d92-9f9f-608894f60eac", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Eokge7A7vrpJgXbUoKfGQUcBbWvX1Xo9f4YTTUUbRFAWBw?e=4Bwnta", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=68b468b1-2a4e-46f6-b8ad-ba175fcd24ac", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Emn2B2Nex_VOie0BG3hIzxYBrDsX63NZMfu6fhEqU-FqHw?e=ry2ql6", type: "pdf" },
+                    evaluation: { preview: "#", download: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EdPIHd554IFCphT5KCSKAQMBje40bfEDCjEkYrFOxOflAw?e=9dzCzY", type: "pdf" }
                 },
                 "101اسلم": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=87f14e87-f7ab-4228-9f2b-b948af227fda", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYdO8Yer9yhCnyu5SK8if9oBkzKO3qSuPCV-tpe-WJ8QDQ?e=CWFKbA", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=4ec82bc6-31bd-4688-85e3-60701ffc3a37", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EcYryE69MYhGheNgcB_8OjcB1wY7_uTPXisnYYKVkfDtIA?e=8R9jls", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
                     enrichment: { preview: "#", download: "#", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "101رياض": {
-                    bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
-                    presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=20b64b6d-87fc-45a8-9cff-95bc625c97ab", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EW1LtiD8h6hFnP-VvGJcl6sBjE9XgGTwRznZUz5Cde_-fQ?e=w3fb2Q", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=be5d6fb4-74a6-4579-87b6-67b89621e6d4", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EbRvXb6mdHlFh7ZnuJYh5tQBYMF40ckEALrk_kVuXSj0jA?e=alYVhn", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=94eb16aa-f7ea-4943-89a3-64326d8ad3f8", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EaoW65Tq90NJiaNkMm2K0_gBXkPTe4EgUnERBl3sFSX3Fg?e=1KnUiR", type: "pdf" },
+                    presentations: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=97fadb14-f88e-442b-be0e-6fa59bbd5580", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EshTsBZkQ5pJksxHegjZPvQBjGhjS8ZTNwqFX4oEX4kYJw?e=P0xyqE", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=de57e640-d78e-40b9-8a95-bab4697052d7", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EiMz7NiyY11KmR9pv96fL1AB0Byo8icIzRptA-0nFoaClQ?e=rLThgO", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=70e0f96c-9d79-47a0-80f3-26e4077b1abf", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EtsKNmSkT35AqGtxDArltbMB1v6EA9QGh8Fw2_t2JVJGSA?e=hE6ug4", type: "pdf" }
                 },
                 "101عربي": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ab53e3f2-8ed0-4641-aeb7-499318d413c5", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EfLjU6vQjkFGrrdJkxjUE8UBchdNAo6xVlgZ0r9UcrZesg?e=hmZ4Wp", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=bb8c1fb3-becb-4f2b-bbdd-c82f46a3a195", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EbMfjLvLvitPu93IL0ajoZUBto-YIIYSdPbMiLdsJ0ps3Q?e=omMpbZ", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
                     enrichment: { preview: "#", download: "#", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "101فيزي": {
-                    bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
+                    bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d880a634-a76d-446a-a4e6-8e078ef7753e", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ETSmgNhtp2pEpOaOB473dT4BcUkUt_M_qIyqmMucnAT5eA?e=hionTw", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3becdfd7-014a-4f43-acfc-de0579990345", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Edff7DtKAUNPrPzeBXmZA0UBSyfLWHOTDEsA56wuxPAOuw?e=d15FiH", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
-                    presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    presentations: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c6e4e45f-c2d6-435b-b62f-0dd05bc514a1", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EnkHO3ejlqtPmwIaob7WNuQByn5Ds82UXMHgxOR54kTlDA?e=MqRvUA", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3e229462-2e2c-48e5-b570-f9613aa5d909", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/En6QL1SD-_9Gk2RMZxzb7OYBrpELK75Yw1RvpLUvl6F0lA?e=lYn1Ia", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=839eb2c9-8666-44f1-8534-59178444480f", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EcmynoNmhvFEhTRZF4RESA8BKLOiQAcx-y6R-_VKNzNXiA?e=20XmiA", type: "pdf" }
                 },
                 "101اسلك": {
-                    bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
-                    presentations: { preview: "#", download: "#", type: "pdf" },
+                    bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=867a9cae-41cb-4fb0-ade9-e42b38d37dc2", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ea6ceobLQbBPrenkKzjTfcIBZPYdcyjGkN1pLz3BEe7FHg?e=0fDUkD", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d8b9b09d-7887-4cec-ad10-1683cd7ca667", download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d8b9b09d-7887-4cec-ad10-1683cd7ca667", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ac8eb7d0-60f5-4350-a279-25efd6d10905", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EdC3jqz1YFBDonkl79bRCQUBsJVDz0HL8UjLhuLniLa2ag?e=i2rfXQ", type: "pdf" },
+                    presentations: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=76ddcda6-6e3e-4674-92d6-70aa4d58745f", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Eh6S9N_CEXtGhqm-jmyx37IBbA26f-6xlsb8K1m6UEcZrw?e=aXXCnO", type: "pdf" },
                     enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a3686f59-0c4c-4570-bc7c-a429bd5958ab", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Es4XFxcWgDNNonYVO9Z9JkUBC9YeuHA7Tdez0mlkxATlZw?e=2YLRrB", type: "pdf" }
                 },
                 "101رياد": {
-                    bag: { preview: "#", download: "#", type: "pdf" },
+                    bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=f2bf3bb7-35fc-41a6-a86e-1c256c5ffd07", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ebc7v_L8NaZBqG4cJWxf_QcBNSZfsID-lzz6wI9YECxyvQ?e=TVDu0w", type: "pdf" },
                     plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
-                    presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9febf29f-712b-415a-bc47-e0967c883607", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EZ_y658rcVpBvEfglnyINgcBQR2oOc6_CmSlYguO3h4mBw?e=0qFl3x", type: "pdf" },
+                    presentations: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=7a6ee7c6-9133-43d9-b5e0-a5d175e45359", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkRIkzB_m1dFka0KkmAMtskBOHr2VHlXeD2fOHrdPnKYMg?e=wECZ51", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b532a584-d743-4010-973e-01aeea2d8e6d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/ErXz3F8dhoZPgr3JfAYITRgBPSRV_SHGjtP4gTsN8PxbKQ?e=O09dA5", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b2408848-3e69-4971-80ed-68c111e793e8", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Elq3wsQCgfhAr9TvyAadX9EB2ly9feQHtd3G7ln2djiwKg?e=kDv49S", type: "pdf" }
                 },
                 "ENGL101": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=55faf6d6-a776-4dc7-893d-c420735f76a3", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Edb2-lV2p8dNiT3EIHNfdqMBL_0tTjdYyCFlCzmx04PGbg?e=AsLhcB", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69a86f00-e5e1-4c98-98c2-bae7b43aadc9", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EQBvqGnh5ZhMmMK657Q6rckBmup8nv_TD00EVD9ixZwFFg?e=OKgvd4", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=77bd6a13-fd7f-4992-8c50-b9ef551086ba", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Et1w4uvMUxlOkmS5EdrYnQ8B-1jQIQffJmqb-2UY3y5dOw?e=DjB7CO", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=7e993d41-049b-4083-bdc9-4aaa1eba5bb3", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Es1gBSURCedMmiY1YbzGyBMB5Vts20FBILKzfRXE0CeBdQ?e=YRb0Ut", type: "pdf" }
                 },
                 "ENGL102": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ca1db267-3531-46fb-9cb6-8576c9cdaab3", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EWeyHcoxNftGnLaFdsnNqrMBA0zdr1h5KVXkyAmMr7QC-A?e=NWpKMY", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=f349f518-aac5-4a55-9caa-95503687dc6f", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/ERj1SfPFqlVKnKqVUDaH3G8BemfvvrhyiC2D8ACjMrFJIQ?e=AzkAjM", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=97091a82-488c-43b2-87e9-9433561e161e", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Ev0MRscf7-lJtNazSJ4pxXgBK7s9V-MGhRGnBPx0RG3jzA?e=shol8o", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c885e8a9-a431-42eb-a1ee-e70f1bb44c46", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EanohcgxpOtCoe7nDxu0TEYB-Sb2Yhjms2hc32n3obT0iA?e=MVWr21", type: "pdf" }
                 },
                 "ENGL103": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=5e907d67-1d61-48da-ac73-0f11d262fd7d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkyJnc8o_CBGugx1AMW-f_4BQoY4nzQUxn8iot6DPX1r_A?e=EaoFvB", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=890024fe-b229-4365-aa8f-a3f53fd784b0", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Evh-r_hbMoZKiJeabsieU3cBiWxISxVNENA5eV5AdDYFew?e=K1g3Z3", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "ENGL111": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=23242232-0f0a-429e-b02c-1b1f349f3c1c", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EsDSSYTeUPZJjP3TzkKusdUBApaulNklYLFdn6QIkHU7Ew?e=PPzhff", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b914bf68-7a7f-417d-96df-fa73eb3d3e02", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EWi_FLl_en1Blt_6c-s9PgIBWE3QPD1B1za2pdJ7Pxq4GA?e=6NSSZ5", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=508ebd58-327c-4604-a828-14280121416d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/ErqMD6c4GfBFvcsNWgHkqnYB-Ap363x5lgMHfgV1r_zbLw?e=zPSXUu", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3282285e-d597-45ea-86dd-bfe8a663de22", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkPrBD-Ke-lAhTSE6eX2RP0BzLAm7KmbrP8dexH57uee2w?e=Vviv1o", type: "pdf" }
                 },
                 "ENGL112": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=abf3184e-fa83-4f19-852d-2891db4ac053", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EU4Y86uD-hlPhS0okdtKwFMByjyTObq_G6V83T5dmePhYg?e=Oi3bhA", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=2324dfd8-2f51-479c-80e7-5d29e123d464", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EdjfJCNRL5xHgOddKeEj1GQBAZlHwJjU26K0ig4AaNIPSQ?e=W9wZ8B", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c4d9e70e-8820-4f76-9517-53216ae372ec", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Esk2U275bWFFusDRaYx6J6sBr74ve5tZRrPKqA33N6oUSw?e=JuVYrQ", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=67bd1a7e-fe70-42eb-8f31-fb94ae834c88", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EX4avWdw_utCjzH7lK6DTIgB0cEKW5Y4AJd2tNsmWhXHaw?e=ry0sS1", type: "pdf" }
                 },
                 "ENGL113": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=5e907d67-1d61-48da-ac73-0f11d262fd7d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkyJnc8o_CBGugx1AMW-f_4BQoY4nzQUxn8iot6DPX1r_A?e=FQLhvS", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=890024fe-b229-4365-aa8f-a3f53fd784b0", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Evh-r_hbMoZKiJeabsieU3cBiWxISxVNENA5eV5AdDYFew?e=lDHnwM", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
                 "ENGL204": {
                     bag: { preview: "#", download: "#", type: "pdf" },
-                    plans: { preview: "#", download: "#", type: "pdf" },
-                    questions: { preview: "#", download: "#", type: "pdf" },
+                    plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=99f8d15f-edbd-4b1d-b1ba-debf4231e2a4", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EV_R-Jm97R1Lsbrev0Ix4qQBTZTdxLXJVEoUxIR8-sxeCA?e=a6MbtV", type: "pdf" },
+                    questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=11bfcb0e-a598-4e1c-accf-cd25122abd4a", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EQ7LvxGYpRxOrM_NJRIqvUoBKnVRgAUnC5__z_NY9D0ktw?e=qghHC1", type: "pdf" },
                     presentations: { preview: "#", download: "#", type: "pdf" },
-                    enrichment: { preview: "#", download: "#", type: "pdf" },
-                    evaluation: { preview: "#", download: "#", type: "pdf" }
+                    enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=896f9c09-8cc4-4a06-8878-7000251fbd9e", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EqVQdk9s8AlGqrK0kdYUi5gByyyDJfElAMXcET-MeD18ew?e=pXqC8z", type: "pdf" },
+                    evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=0bc15fb5-c27b-489e-92eb-0abf3ba7277f", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EuEG1QkRe-RMrx-eeL69eqoBm4je9yuuI-n86ULLTY-JVg?e=y1yRzn", type: "pdf" }
                 }
             },
             solutions: {
@@ -1682,7 +1761,7 @@
         let currentCategory = null;
         let currentFileInfo = null;
 
-        // دالة لإظهار الإشعارات
+        // دالة محسنة لإظهار الإشعارات
         function showNotification(message, type = 'info') {
             const notification = document.createElement('div');
             notification.className = `notification ${type}`;
@@ -1799,20 +1878,29 @@
         // إعداد أحداث إغلاق النماذج
         function setupModalEvents() {
             // إغلاق النماذج المنبثقة
-            document.querySelectorAll('.close-modal, .preview-close').forEach(btn => {
+            document.querySelectorAll('.close-modal').forEach(btn => {
                 btn.addEventListener('click', function() {
-                    document.querySelectorAll('.modal, .preview-modal').forEach(modal => {
+                    document.querySelectorAll('.modal').forEach(modal => {
                         modal.style.display = 'none';
                     });
                     resetModalState();
                 });
             });
             
+            // إغلاق معاينة الملف فقط
+            document.querySelector('.preview-close').addEventListener('click', function() {
+                document.getElementById('previewModal').style.display = 'none';
+                // لا نقوم بإعادة تعيين الحالة عند إغلاق المعاينة فقط
+            });
+            
             // النقر خارج النموذج لإغلاقه
             window.addEventListener('click', function(event) {
-                if (event.target.classList.contains('modal') || event.target.classList.contains('preview-modal')) {
+                if (event.target.classList.contains('modal')) {
                     event.target.style.display = 'none';
                     resetModalState();
+                } else if (event.target.classList.contains('preview-modal')) {
+                    event.target.style.display = 'none';
+                    // لا نقوم بإعادة تعيين الحالة عند إغلاق المعاينة فقط
                 }
             });
         }
@@ -1826,6 +1914,12 @@
                 courseCard.className = 'course-card';
                 courseCard.setAttribute('data-code', course.code);
                 
+                // التحقق مما إذا كان المقرر يحتوي على روابط فعلية
+                const hasLinks = checkCourseHasLinks(course.code);
+                if (!hasLinks) {
+                    courseCard.classList.add('coming-soon');
+                }
+                
                 courseCard.innerHTML = `
                     <div class="course-code">${course.code}</div>
                     <div class="course-name">${course.name}</div>
@@ -1833,6 +1927,19 @@
                 
                 coursesGrid.appendChild(courseCard);
             });
+        }
+
+        // التحقق مما إذا كان المقرر يحتوي على روابط فعلية
+        function checkCourseHasLinks(courseCode) {
+            const courseData = linksDatabase.courses[courseCode];
+            if (!courseData) return false;
+            
+            for (const option in courseData) {
+                if (courseData[option].preview !== "#" || courseData[option].download !== "#") {
+                    return true;
+                }
+            }
+            return false;
         }
 
         // تهيئة المشاكل والحلول
@@ -1843,6 +1950,12 @@
                 const iconCard = document.createElement('div');
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', solution);
+                
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('solutions', solution);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
                 
                 iconCard.innerHTML = `
                     <i class="fas fa-tools"></i>
@@ -1862,6 +1975,12 @@
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', regulation);
                 
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('regulations', regulation);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
+                
                 iconCard.innerHTML = `
                     <i class="fas fa-file-alt"></i>
                     <div>${regulation}</div>
@@ -1879,6 +1998,12 @@
                 const iconCard = document.createElement('div');
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', trainer);
+                
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('trainers', trainer);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
                 
                 iconCard.innerHTML = `
                     <i class="fas fa-chalkboard-teacher"></i>
@@ -1898,6 +2023,12 @@
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', trainee);
                 
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('trainees', trainee);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
+                
                 iconCard.innerHTML = `
                     <i class="fas fa-user-graduate"></i>
                     <div>${trainee}</div>
@@ -1915,6 +2046,12 @@
                 const iconCard = document.createElement('div');
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', suggestion);
+                
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('suggestions', suggestion);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
                 
                 iconCard.innerHTML = `
                     <i class="fas fa-lightbulb"></i>
@@ -1934,6 +2071,12 @@
                 iconCard.className = 'icon-card';
                 iconCard.setAttribute('data-name', reference);
                 
+                // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+                const hasLinks = checkItemHasLinks('references', reference);
+                if (!hasLinks) {
+                    iconCard.classList.add('coming-soon');
+                }
+                
                 iconCard.innerHTML = `
                     <i class="fas fa-book"></i>
                     <div>${reference}</div>
@@ -1941,6 +2084,14 @@
                 
                 referencesGrid.appendChild(iconCard);
             });
+        }
+
+        // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+        function checkItemHasLinks(category, itemName) {
+            const itemData = linksDatabase[category][itemName];
+            if (!itemData) return false;
+            
+            return itemData.preview !== "#" || itemData.download !== "#";
         }
 
         // إعداد أحداث النقر
@@ -2045,25 +2196,40 @@
             
             modalTitle.textContent = itemName;
             
-            // إعداد خيارات المعاينة والتحميل
-            actionOptions.innerHTML = `
-                <div class="sub-option-card" data-action="preview">
-                    <i class="fas fa-eye"></i>
-                    <div>المعاينة</div>
-                </div>
-                <div class="sub-option-card" data-action="download">
-                    <i class="fas fa-download"></i>
-                    <div>التحميل</div>
-                </div>
-            `;
+            // التحقق مما إذا كان العنصر يحتوي على روابط فعلية
+            const hasLinks = checkItemHasLinks(currentCategory, itemName);
             
-            // إعداد أحداث النقر للخيارات
-            document.querySelectorAll('.sub-option-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const action = this.getAttribute('data-action');
-                    handleGeneralAction(action);
+            if (!hasLinks) {
+                // إذا لم تكن هناك روابط فعلية، عرض رسالة "قريباً"
+                actionOptions.innerHTML = `
+                    <div class="preview-message">
+                        <i class="fas fa-clock" style="font-size: 4rem; color: var(--teal-green); margin-bottom: 20px;"></i>
+                        <h3>سيتم توفير المحتوى قريباً</h3>
+                        <p>نعمل حالياً على إعداد هذا المحتوى وسيتم توفيره في أقرب وقت ممكن.</p>
+                        <p>شكراً لتفهمكم وصبركم.</p>
+                    </div>
+                `;
+            } else {
+                // إعداد خيارات المعاينة والتحميل
+                actionOptions.innerHTML = `
+                    <div class="sub-option-card" data-action="preview">
+                        <i class="fas fa-eye"></i>
+                        <div>المعاينة</div>
+                    </div>
+                    <div class="sub-option-card" data-action="download">
+                        <i class="fas fa-download"></i>
+                        <div>التحميل</div>
+                    </div>
+                `;
+                
+                // إعداد أحداث النقر للخيارات
+                document.querySelectorAll('.sub-option-card').forEach(card => {
+                    card.addEventListener('click', function() {
+                        const action = this.getAttribute('data-action');
+                        handleGeneralAction(action);
+                    });
                 });
-            });
+            }
             
             modal.style.display = 'flex';
         }
@@ -2073,157 +2239,148 @@
             const subOptions = document.getElementById('courseSubOptions');
             const actionOptions = document.getElementById('courseActionOptions');
             
-            // إعداد خيارات المعاينة والتحميل
-            actionOptions.innerHTML = `
-                <div class="sub-option-card" data-action="preview">
-                    <i class="fas fa-eye"></i>
-                    <div>المعاينة</div>
-                </div>
-                <div class="sub-option-card" data-action="download">
-                    <i class="fas fa-download"></i>
-                    <div>التحميل</div>
-                </div>
-            `;
+            // التحقق مما إذا كان الخيار يحتوي على روابط فعلية
+            const hasLinks = checkCourseOptionHasLinks(currentCourse.code, option);
             
-            // إعداد أحداث النقر للخيارات
-            document.querySelectorAll('.sub-option-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    const action = this.getAttribute('data-action');
-                    handleCourseAction(action);
+            if (!hasLinks) {
+                // إذا لم تكن هناك روابط فعلية، عرض رسالة "قريباً"
+                actionOptions.innerHTML = `
+                    <div class="preview-message">
+                        <i class="fas fa-clock" style="font-size: 4rem; color: var(--teal-green); margin-bottom: 20px;"></i>
+                        <h3>سيتم توفير المحتوى قريباً</h3>
+                        <p>نعمل حالياً على إعداد هذا المحتوى وسيتم توفيره في أقرب وقت ممكن.</p>
+                        <p>شكراً لتفهمكم وصبركم.</p>
+                    </div>
+                `;
+            } else {
+                // إعداد خيارات المعاينة والتحميل
+                actionOptions.innerHTML = `
+                    <div class="sub-option-card" data-action="preview">
+                        <i class="fas fa-eye"></i>
+                        <div>المعاينة</div>
+                    </div>
+                    <div class="sub-option-card" data-action="download">
+                        <i class="fas fa-download"></i>
+                        <div>التحميل</div>
+                    </div>
+                `;
+                
+                // إعداد أحداث النقر للخيارات
+                document.querySelectorAll('.sub-option-card').forEach(card => {
+                    card.addEventListener('click', function() {
+                        const action = this.getAttribute('data-action');
+                        handleCourseAction(action);
+                    });
                 });
-            });
+            }
             
             subOptions.classList.add('active');
         }
 
-        // معالجة إجراء المقرر
+        // التحقق مما إذا كان خيار المقرر يحتوي على روابط فعلية
+        function checkCourseOptionHasLinks(courseCode, option) {
+            const courseData = linksDatabase.courses[courseCode];
+            if (!courseData || !courseData[option]) return false;
+            
+            return courseData[option].preview !== "#" || courseData[option].download !== "#";
+        }
+
+        // معالجة الإجراءات للمقررات
         function handleCourseAction(action) {
-            if (currentCourse && currentOption) {
-                const fileInfo = linksDatabase.courses[currentCourse.code][currentOption];
-                if (fileInfo && fileInfo[action]) {
-                    currentFileInfo = fileInfo;
-                    if (action === 'preview') {
-                        openFilePreview(currentCourse.name, fileInfo);
-                    } else if (action === 'download') {
-                        downloadFile(fileInfo.download, `${currentCourse.code}_${currentOption}.${getFileExtension(fileInfo.type)}`);
-                    }
-                } else {
-                    showNotification('الرابط غير متوفر حالياً', 'error');
-                }
+            const courseData = linksDatabase.courses[currentCourse.code];
+            if (!courseData || !courseData[currentOption]) {
+                showNotification('عذراً، لا توجد روابط متاحة لهذا المحتوى حالياً', 'error');
+                return;
             }
             
-            // إغلاق النماذج
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.style.display = 'none';
-            });
+            const fileInfo = courseData[currentOption];
+            currentFileInfo = fileInfo;
+            
+            if (action === 'preview') {
+                previewFile(fileInfo, `${currentCourse.code} - ${currentOption}`);
+            } else if (action === 'download') {
+                downloadFile(fileInfo, `${currentCourse.code}_${currentOption}`);
+            }
         }
 
-        // معالجة الإجراء العام
+        // معالجة الإجراءات العامة
         function handleGeneralAction(action) {
-            if (currentItem && currentCategory) {
-                const fileInfo = linksDatabase[currentCategory][currentItem];
-                if (fileInfo && fileInfo[action]) {
-                    currentFileInfo = fileInfo;
-                    if (action === 'preview') {
-                        openFilePreview(currentItem, fileInfo);
-                    } else if (action === 'download') {
-                        downloadFile(fileInfo.download, `${currentItem}.${getFileExtension(fileInfo.type)}`);
-                    }
-                } else {
-                    showNotification('الرابط غير متوفر حالياً', 'error');
-                }
+            const itemData = linksDatabase[currentCategory][currentItem];
+            if (!itemData) {
+                showNotification('عذراً، لا توجد روابط متاحة لهذا المحتوى حالياً', 'error');
+                return;
             }
             
-            // إغلاق النماذج
-            document.querySelectorAll('.modal').forEach(modal => {
-                modal.style.display = 'none';
-            });
+            currentFileInfo = itemData;
+            
+            if (action === 'preview') {
+                previewFile(itemData, currentItem);
+            } else if (action === 'download') {
+                downloadFile(itemData, currentItem);
+            }
         }
 
-        // فتح معاينة الملف
-        function openFilePreview(title, fileInfo) {
+        // معاينة الملف
+        function previewFile(fileInfo, title) {
             const previewModal = document.getElementById('previewModal');
             const previewTitle = document.getElementById('previewTitle');
             const previewBody = document.getElementById('previewBody');
             
             previewTitle.textContent = `معاينة: ${title}`;
             
-            // مسح محتوى المعاينة السابق
-            previewBody.innerHTML = '';
+            // إظهار النموذج
+            previewModal.style.display = 'flex';
             
-            // التحقق من نوع الملف وعرضه بشكل مناسب
-            const fileType = fileInfo.type.toLowerCase();
-            const fileUrl = fileInfo.preview;
-            
-            if (fileType === 'pdf') {
-                // عرض PDF باستخدام OneDrive أو Google Viewer
-                previewBody.innerHTML = `<iframe class="preview-frame" src="${fileUrl}"></iframe>`;
-            } else if (['doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(fileType)) {
-                // عرض ملفات Office باستخدام Office Online
-                previewBody.innerHTML = `<iframe class="preview-frame" src="https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}"></iframe>`;
-            } else if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileType)) {
-                // عرض الصور مباشرة
-                previewBody.innerHTML = `<img src="${fileUrl}" style="max-width: 100%; max-height: 100%;" alt="${title}">`;
-            } else if (['mp4', 'webm', 'ogg'].includes(fileType)) {
-                // عرض الفيديو
-                previewBody.innerHTML = `
-                    <video controls style="max-width: 100%; max-height: 100%;">
-                        <source src="${fileUrl}" type="video/${fileType}">
-                        متصفحك لا يدعم تشغيل الفيديو.
-                    </video>
-                `;
+            // إعداد محتوى المعاينة بناءً على نوع الملف
+            if (fileInfo.preview && fileInfo.preview !== "#") {
+                if (fileInfo.type === 'pdf') {
+                    previewBody.innerHTML = `
+                        <iframe class="preview-frame" src="${fileInfo.preview}" title="معاينة الملف"></iframe>
+                    `;
+                } else {
+                    // إذا لم يكن ملف PDF، نعرض رابطاً للتحميل فقط
+                    previewBody.innerHTML = `
+                        <div class="preview-message">
+                            <i class="fas fa-download" style="font-size: 4rem; color: var(--teal-green); margin-bottom: 20px;"></i>
+                            <h3>لا يمكن معاينة هذا النوع من الملفات</h3>
+                            <p>يمكنك تحميل الملف لعرضه على جهازك.</p>
+                            <a href="${fileInfo.download}" target="_blank" class="download-link">
+                                <i class="fas fa-download"></i>
+                                تحميل الملف
+                            </a>
+                        </div>
+                    `;
+                }
             } else {
-                // الملفات غير المدعومة للمعاينة
+                // إذا لم توجد معاينة، نعرض رسالة خطأ محسنة
                 previewBody.innerHTML = `
-                    <div class="preview-message">
-                        <i class="fas fa-file-download"></i>
-                        <h3>لا يمكن معاينة هذا النوع من الملفات</h3>
-                        <p>نوع الملف: ${fileType.toUpperCase()}</p>
-                        <p>يرجى تحميل الملف لعرضه على جهازك.</p>
-                        <button class="cta-button" onclick="downloadFile('${fileInfo.download}', '${title}.${getFileExtension(fileType)}')" style="margin-top: 20px;">
-                            <i class="fas fa-download"></i> تحميل الملف
-                        </button>
+                    <div class="error-message">
+                        <div class="error-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="error-title">لا يمكن معاينة هذا الملف</h3>
+                        <p class="error-description">
+                            عذراً، لا يمكن معاينة هذا الملف مباشرة في المتصفح.<br>
+                            يمكنك تحميل الملف لعرضه على جهازك باستخدام التطبيقات المناسبة.
+                        </p>
+                        <a href="${fileInfo.download}" target="_blank" class="download-link">
+                            <i class="fas fa-download"></i>
+                            تحميل الملف الآن
+                        </a>
                     </div>
                 `;
             }
-            
-            previewModal.style.display = 'flex';
         }
 
-        // تحميل الملف
-        function downloadFile(url, filename) {
-            // إنشاء رابط تحميل مؤقت
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = filename;
-            link.target = '_blank';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            showNotification('جاري تحميل الملف...', 'success');
-        }
-
-        // الحصول على امتداد الملف
-        function getFileExtension(fileType) {
-            const extensions = {
-                'pdf': 'pdf',
-                'doc': 'doc',
-                'docx': 'docx',
-                'ppt': 'ppt',
-                'pptx': 'pptx',
-                'xls': 'xls',
-                'xlsx': 'xlsx',
-                'jpg': 'jpg',
-                'jpeg': 'jpeg',
-                'png': 'png',
-                'gif': 'gif',
-                'zip': 'zip',
-                'rar': 'rar',
-                'mp4': 'mp4'
-            };
-            
-            return extensions[fileType] || 'file';
+        // تحميل الملف - المعدل لفتحه في نافذة جديدة
+        function downloadFile(fileInfo, fileName) {
+            if (fileInfo.download && fileInfo.download !== "#") {
+                // فتح الرابط في نافذة جديدة مع الحفاظ على الصفحة الحالية
+                window.open(fileInfo.download, '_blank');
+                showNotification('جاري فتح الملف في نافذة جديدة', 'success');
+            } else {
+                showNotification('عذراً، لا يوجد رابط تحميل متاح لهذا الملف', 'error');
+            }
         }
 
         // إعادة تعيين حالة النماذج
@@ -2234,10 +2391,13 @@
             currentCategory = null;
             currentFileInfo = null;
             
-            // إزالة التمييز من جميع الخيارات عند إغلاق النموذج
+            // إزالة التمييز من جميع الخيارات
             document.querySelectorAll('.option-card').forEach(c => {
                 c.classList.remove('selected');
             });
+            
+            // إخفاء الخيارات الفرعية
+            document.getElementById('courseSubOptions').classList.remove('active');
         }
 
         // إعداد التنقل المتنقل
@@ -2247,19 +2407,23 @@
             
             mobileMenuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
             });
             
             // إغلاق القائمة عند النقر على رابط
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', function() {
                     navLinks.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
                 });
             });
         }
 
         // إعداد تأثيرات التمرير
         function setupScrollEffects() {
-            // تأثيرات للبطاقات عند الظهور
+            // إضافة تأثير الظهور التدريجي للعناصر
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -2268,18 +2432,14 @@
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('animate-in');
                     }
                 });
             }, observerOptions);
             
-            // تطبيق التأثير على البطاقات
-            document.querySelectorAll('.course-card, .icon-card, .stat-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
+            // مراقبة العناصر لإضافة تأثيرات الظهور
+            document.querySelectorAll('.section, .stat-card, .course-card, .icon-card').forEach(el => {
+                observer.observe(el);
             });
         }
 
@@ -2294,18 +2454,42 @@
                     
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        // حساب الموقع مع مراعاة شريط التنقل الثابت
+                        const headerHeight = document.querySelector('header').offsetHeight;
                         const navHeight = document.querySelector('nav').offsetHeight;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                        const offsetTop = targetElement.offsetTop - headerHeight - navHeight - 20;
                         
                         window.scrollTo({
-                            top: targetPosition,
+                            top: offsetTop,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
         }
+
+        // إضافة بعض الأنماط الإضافية للرسوم المتحركة
+        const style = document.createElement('style');
+        style.textContent = `
+            .animate-in {
+                animation: fadeInUp 0.6s ease forwards;
+            }
+            
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .course-card, .icon-card, .stat-card {
+                opacity: 0;
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
