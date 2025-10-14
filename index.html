@@ -1044,6 +1044,220 @@
             line-height: 1.6;
         }
 
+        /* أنماط جديدة للشات بوت */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            background: var(--teal-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            background: var(--dark-teal);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .chatbot-header {
+            background: var(--teal-green);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .chatbot-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .chatbot-close:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            line-height: 1.4;
+            word-wrap: break-word;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .bot-message {
+            align-self: flex-start;
+            background: #f0f0f0;
+            color: #333;
+            border-bottom-right-radius: 5px;
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background: var(--teal-green);
+            color: white;
+            border-bottom-left-radius: 5px;
+        }
+
+        .chatbot-input-area {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #e0e0e0;
+            background: #f9f9f9;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.9rem;
+            resize: none;
+            max-height: 100px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .chatbot-input:focus {
+            border-color: var(--teal-green);
+        }
+
+        .chatbot-send {
+            background: var(--teal-green);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .chatbot-send:hover {
+            background: var(--dark-teal);
+            transform: scale(1.05);
+        }
+
+        .chatbot-send:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-self: flex-start;
+            background: #f0f0f0;
+            padding: 10px 15px;
+            border-radius: 18px;
+            border-bottom-right-radius: 5px;
+            color: #666;
+            font-style: italic;
+        }
+
+        .typing-dots {
+            display: inline-flex;
+            margin-right: 5px;
+        }
+
+        .typing-dots span {
+            height: 8px;
+            width: 8px;
+            background: #999;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 1100px) {
             .courses-grid, .icons-grid {
@@ -1124,6 +1338,16 @@
             .survey-title {
                 font-size: 1.8rem;
             }
+
+            .chatbot-container {
+                bottom: 10px;
+                left: 10px;
+            }
+            
+            .chatbot-window {
+                width: 300px;
+                height: 450px;
+            }
         }
 
         @media (max-width: 600px) {
@@ -1162,6 +1386,11 @@
             .logo, .footer-logo {
                 width: 120px;
                 height: 120px;
+            }
+
+            .chatbot-window {
+                width: 280px;
+                height: 400px;
             }
         }
     </style>
@@ -1429,11 +1658,37 @@
         </div>
     </div>
 
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotToggle">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">مساعد المكتبة الرقمية</div>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    مرحباً! أنا مساعد المكتبة الرقمية. كيف يمكنني مساعدتك اليوم؟
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <textarea class="chatbot-input" id="chatbotInput" placeholder="اكتب رسالتك هنا..." rows="1"></textarea>
+                <button class="chatbot-send" id="chatbotSend">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // قاعدة بيانات كاملة مع جميع العناصر
         const linksDatabase = {
             courses: {
-                "101احصا": {
+                "101 احصا": {
                    bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b20b2384-9df7-4423-b6d9-0ba34ae52cd8", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYQjC7L3nSNEttkLo0rlLNgBGpe6PvCGj5TDrh0ksL4tsw?e=tx69zR", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69425140-1aef-4881-b681-43a1aa206d23", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EUBRQmnvGoFItoFDoaogbSMBu9OEXmMFSso49Gd7fys5UA?e=53jMma", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=489c8635-0da6-49bc-b7b7-987432ddd5f2", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/ETWGnEimDbxJt7eYdDLd1fIBy8ponr5tz0dM5EQF8RAMXA?e=nO5CMs", type: "pdf" },
@@ -1441,7 +1696,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=68b468b1-2a4e-46f6-b8ad-ba175fcd24ac", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Emn2B2Nex_VOie0BG3hIzxYBrDsX63NZMfu6fhEqU-FqHw?e=ry2ql6", type: "pdf" },
                     evaluation: { preview: "#", download: "https://mttvtcedu-my.sharepoint.com/:w:/g/personal/shorog_a_tvtc_gov_sa/EdPIHd554IFCphT5KCSKAQMBje40bfEDCjEkYrFOxOflAw?e=9dzCzY", type: "pdf" }
                 },
-                "101اسلم": {
+                "101 اسلم": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=87f14e87-f7ab-4228-9f2b-b948af227fda", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EYdO8Yer9yhCnyu5SK8if9oBkzKO3qSuPCV-tpe-WJ8QDQ?e=CWFKbA", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=4ec82bc6-31bd-4688-85e3-60701ffc3a37", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EcYryE69MYhGheNgcB_8OjcB1wY7_uTPXisnYYKVkfDtIA?e=8R9jls", type: "pdf" },
@@ -1449,7 +1704,7 @@
                     enrichment: { preview: "#", download: "#", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
-                "101رياض": {
+                "101 رياض": {
                     bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=20b64b6d-87fc-45a8-9cff-95bc625c97ab", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EW1LtiD8h6hFnP-VvGJcl6sBjE9XgGTwRznZUz5Cde_-fQ?e=w3fb2Q", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=be5d6fb4-74a6-4579-87b6-67b89621e6d4", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EbRvXb6mdHlFh7ZnuJYh5tQBYMF40ckEALrk_kVuXSj0jA?e=alYVhn", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=94eb16aa-f7ea-4943-89a3-64326d8ad3f8", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EaoW65Tq90NJiaNkMm2K0_gBXkPTe4EgUnERBl3sFSX3Fg?e=1KnUiR", type: "pdf" },
@@ -1457,7 +1712,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=de57e640-d78e-40b9-8a95-bab4697052d7", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EiMz7NiyY11KmR9pv96fL1AB0Byo8icIzRptA-0nFoaClQ?e=rLThgO", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=70e0f96c-9d79-47a0-80f3-26e4077b1abf", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EtsKNmSkT35AqGtxDArltbMB1v6EA9QGh8Fw2_t2JVJGSA?e=hE6ug4", type: "pdf" }
                 },
-                "101عربي": {
+                "101 عربي": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ab53e3f2-8ed0-4641-aeb7-499318d413c5", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EfLjU6vQjkFGrrdJkxjUE8UBchdNAo6xVlgZ0r9UcrZesg?e=hmZ4Wp", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=bb8c1fb3-becb-4f2b-bbdd-c82f46a3a195", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EbMfjLvLvitPu93IL0ajoZUBto-YIIYSdPbMiLdsJ0ps3Q?e=omMpbZ", type: "pdf" },
@@ -1465,7 +1720,7 @@
                     enrichment: { preview: "#", download: "#", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
-                "101فيزي": {
+                "101 فيزي": {
                     bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d880a634-a76d-446a-a4e6-8e078ef7753e", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/ETSmgNhtp2pEpOaOB473dT4BcUkUt_M_qIyqmMucnAT5eA?e=hionTw", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3becdfd7-014a-4f43-acfc-de0579990345", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Edff7DtKAUNPrPzeBXmZA0UBSyfLWHOTDEsA56wuxPAOuw?e=d15FiH", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
@@ -1473,7 +1728,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3e229462-2e2c-48e5-b570-f9613aa5d909", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/En6QL1SD-_9Gk2RMZxzb7OYBrpELK75Yw1RvpLUvl6F0lA?e=lYn1Ia", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=839eb2c9-8666-44f1-8534-59178444480f", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EcmynoNmhvFEhTRZF4RESA8BKLOiQAcx-y6R-_VKNzNXiA?e=20XmiA", type: "pdf" }
                 },
-                "101اسلك": {
+                "101 اسلك": {
                     bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=867a9cae-41cb-4fb0-ade9-e42b38d37dc2", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ea6ceobLQbBPrenkKzjTfcIBZPYdcyjGkN1pLz3BEe7FHg?e=0fDUkD", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d8b9b09d-7887-4cec-ad10-1683cd7ca667", download: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=d8b9b09d-7887-4cec-ad10-1683cd7ca667", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ac8eb7d0-60f5-4350-a279-25efd6d10905", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EdC3jqz1YFBDonkl79bRCQUBsJVDz0HL8UjLhuLniLa2ag?e=i2rfXQ", type: "pdf" },
@@ -1481,7 +1736,7 @@
                     enrichment: { preview: "#", download: "#", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=a3686f59-0c4c-4570-bc7c-a429bd5958ab", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Es4XFxcWgDNNonYVO9Z9JkUBC9YeuHA7Tdez0mlkxATlZw?e=2YLRrB", type: "pdf" }
                 },
-                "101رياد": {
+                "101 رياد": {
                     bag: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=f2bf3bb7-35fc-41a6-a86e-1c256c5ffd07", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Ebc7v_L8NaZBqG4cJWxf_QcBNSZfsID-lzz6wI9YECxyvQ?e=TVDu0w", type: "pdf" },
                     plans: { preview: "#", download: "#", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=9febf29f-712b-415a-bc47-e0967c883607", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EZ_y658rcVpBvEfglnyINgcBQR2oOc6_CmSlYguO3h4mBw?e=0qFl3x", type: "pdf" },
@@ -1489,7 +1744,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b532a584-d743-4010-973e-01aeea2d8e6d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/ErXz3F8dhoZPgr3JfAYITRgBPSRV_SHGjtP4gTsN8PxbKQ?e=O09dA5", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b2408848-3e69-4971-80ed-68c111e793e8", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Elq3wsQCgfhAr9TvyAadX9EB2ly9feQHtd3G7ln2djiwKg?e=kDv49S", type: "pdf" }
                 },
-                "ENGL101": {
+                "ENGL 101": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=55faf6d6-a776-4dc7-893d-c420735f76a3", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/Edb2-lV2p8dNiT3EIHNfdqMBL_0tTjdYyCFlCzmx04PGbg?e=AsLhcB", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=69a86f00-e5e1-4c98-98c2-bae7b43aadc9", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EQBvqGnh5ZhMmMK657Q6rckBmup8nv_TD00EVD9ixZwFFg?e=OKgvd4", type: "pdf" },
@@ -1497,7 +1752,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=77bd6a13-fd7f-4992-8c50-b9ef551086ba", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Et1w4uvMUxlOkmS5EdrYnQ8B-1jQIQffJmqb-2UY3y5dOw?e=DjB7CO", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=7e993d41-049b-4083-bdc9-4aaa1eba5bb3", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Es1gBSURCedMmiY1YbzGyBMB5Vts20FBILKzfRXE0CeBdQ?e=YRb0Ut", type: "pdf" }
                 },
-                "ENGL102": {
+                "ENGL 102": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=ca1db267-3531-46fb-9cb6-8576c9cdaab3", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EWeyHcoxNftGnLaFdsnNqrMBA0zdr1h5KVXkyAmMr7QC-A?e=NWpKMY", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=f349f518-aac5-4a55-9caa-95503687dc6f", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/ERj1SfPFqlVKnKqVUDaH3G8BemfvvrhyiC2D8ACjMrFJIQ?e=AzkAjM", type: "pdf" },
@@ -1505,7 +1760,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=97091a82-488c-43b2-87e9-9433561e161e", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Ev0MRscf7-lJtNazSJ4pxXgBK7s9V-MGhRGnBPx0RG3jzA?e=shol8o", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c885e8a9-a431-42eb-a1ee-e70f1bb44c46", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EanohcgxpOtCoe7nDxu0TEYB-Sb2Yhjms2hc32n3obT0iA?e=MVWr21", type: "pdf" }
                 },
-                "ENGL103": {
+                "ENGL 103": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=5e907d67-1d61-48da-ac73-0f11d262fd7d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkyJnc8o_CBGugx1AMW-f_4BQoY4nzQUxn8iot6DPX1r_A?e=EaoFvB", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
@@ -1513,7 +1768,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=890024fe-b229-4365-aa8f-a3f53fd784b0", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Evh-r_hbMoZKiJeabsieU3cBiWxISxVNENA5eV5AdDYFew?e=K1g3Z3", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
-                "ENGL111": {
+                "ENGL 111": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=23242232-0f0a-429e-b02c-1b1f349f3c1c", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EsDSSYTeUPZJjP3TzkKusdUBApaulNklYLFdn6QIkHU7Ew?e=PPzhff", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=b914bf68-7a7f-417d-96df-fa73eb3d3e02", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EWi_FLl_en1Blt_6c-s9PgIBWE3QPD1B1za2pdJ7Pxq4GA?e=6NSSZ5", type: "pdf" },
@@ -1521,7 +1776,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=508ebd58-327c-4604-a828-14280121416d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/ErqMD6c4GfBFvcsNWgHkqnYB-Ap363x5lgMHfgV1r_zbLw?e=zPSXUu", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=3282285e-d597-45ea-86dd-bfe8a663de22", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkPrBD-Ke-lAhTSE6eX2RP0BzLAm7KmbrP8dexH57uee2w?e=Vviv1o", type: "pdf" }
                 },
-                "ENGL112": {
+                "ENGL 112": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=abf3184e-fa83-4f19-852d-2891db4ac053", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EU4Y86uD-hlPhS0okdtKwFMByjyTObq_G6V83T5dmePhYg?e=Oi3bhA", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=2324dfd8-2f51-479c-80e7-5d29e123d464", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EdjfJCNRL5xHgOddKeEj1GQBAZlHwJjU26K0ig4AaNIPSQ?e=W9wZ8B", type: "pdf" },
@@ -1529,7 +1784,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=c4d9e70e-8820-4f76-9517-53216ae372ec", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Esk2U275bWFFusDRaYx6J6sBr74ve5tZRrPKqA33N6oUSw?e=JuVYrQ", type: "pdf" },
                     evaluation: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=67bd1a7e-fe70-42eb-8f31-fb94ae834c88", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EX4avWdw_utCjzH7lK6DTIgB0cEKW5Y4AJd2tNsmWhXHaw?e=ry0sS1", type: "pdf" }
                 },
-                "ENGL113": {
+                "ENGL 113": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=5e907d67-1d61-48da-ac73-0f11d262fd7d", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/EkyJnc8o_CBGugx1AMW-f_4BQoY4nzQUxn8iot6DPX1r_A?e=FQLhvS", type: "pdf" },
                     questions: { preview: "#", download: "#", type: "pdf" },
@@ -1537,7 +1792,7 @@
                     enrichment: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=890024fe-b229-4365-aa8f-a3f53fd784b0", download: "https://mttvtcedu-my.sharepoint.com/:f:/g/personal/shorog_a_tvtc_gov_sa/Evh-r_hbMoZKiJeabsieU3cBiWxISxVNENA5eV5AdDYFew?e=lDHnwM", type: "pdf" },
                     evaluation: { preview: "#", download: "#", type: "pdf" }
                 },
-                "ENGL204": {
+                "ENGL 204": {
                     bag: { preview: "#", download: "#", type: "pdf" },
                     plans: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=99f8d15f-edbd-4b1d-b1ba-debf4231e2a4", download: "https://mttvtcedu-my.sharepoint.com/:b:/g/personal/shorog_a_tvtc_gov_sa/EV_R-Jm97R1Lsbrev0Ix4qQBTZTdxLXJVEoUxIR8-sxeCA?e=a6MbtV", type: "pdf" },
                     questions: { preview: "https://mttvtcedu-my.sharepoint.com/personal/shorog_a_tvtc_gov_sa/_layouts/15/embed.aspx?UniqueId=11bfcb0e-a598-4e1c-accf-cd25122abd4a", download: "https://mttvtcedu-my.sharepoint.com/:u:/g/personal/shorog_a_tvtc_gov_sa/EQ7LvxGYpRxOrM_NJRIqvUoBKnVRgAUnC5__z_NY9D0ktw?e=qghHC1", type: "pdf" },
@@ -1644,20 +1899,20 @@
         // بيانات الموقع
         const siteData = {
             courses: [
-                { code: "101احصا", name: "مقدمة في الإحصاء" },
-                { code: "101اسلم", name: "الدراسات الإسلامية" },
-                { code: "101رياض", name: "الرياضيات" },
-                { code: "101عربي", name: "الكتابة الفنية" },
-                { code: "101فيزي", name: "الفيزياء" },
-                { code: "101اسلك", name: "السلوك الوظيفي والمستقبل المهني" },
-                { code: "101رياد", name: "اساسيات ريادة الأعمال" },
-                { code: "ENGL101", name: "English Language 1" },
-                { code: "ENGL102", name: "English Language 2" },
-                { code: "ENGL103", name: "English Language 3" },
-                { code: "ENGL111", name: "English Language 1" },
-                { code: "ENGL112", name: "English Language 2" },
-                { code: "ENGL113", name: "English Language 3" },
-                { code: "ENGL204", name: "English Language 4" }
+                { code: "101 احصا", name: "مقدمة في الإحصاء" },
+                { code: "101 اسلم", name: "الدراسات الإسلامية" },
+                { code: "101 رياض", name: "الرياضيات العامة" },
+                { code: "101 عربي", name: "الكتابة الفنية" },
+                { code: "101 فيزي", name: "الفيزياء" },
+                { code: "101 اسلك", name: "السلوك الوظيفي والمستقبل المهني" },
+                { code: "101 رياد", name: "اساسيات ريادة الأعمال" },
+                { code: "ENGL 101", name: "English Language 1" },
+                { code: "ENGL 102", name: "English Language 2" },
+                { code: "ENGL 103", name: "English Language 3" },
+                { code: "ENGL 111", name: "English Language 1" },
+                { code: "ENGL 112", name: "English Language 2" },
+                { code: "ENGL 113", name: "English Language 3" },
+                { code: "ENGL 204", name: "English Language 4" }
             ],
             solutions: [
                 "قاعدة بيانات المشكلات والحلول",
@@ -1829,6 +2084,9 @@
             
             // إعداد أحداث إغلاق النماذج
             setupModalEvents();
+            
+            // تهيئة الشات بوت
+            initializeChatbot();
         });
 
         // إعداد وظيفة البحث
@@ -2465,6 +2723,160 @@
                     }
                 });
             });
+        }
+
+        // كود الشات بوت الجديد
+        function initializeChatbot() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotSend = document.getElementById('chatbotSend');
+
+            // رابط الـ webhook الخاص بـ n8n (سيتم تعيينه لاحقاً)
+            // استبدل هذا الرابط برابط الـ webhook الفعلي من n8n
+            const n8nWebhookUrl = 'https://your-n8n-domain.com/webhook/chatbot';
+
+            // فتح/إغلاق نافذة الشات بوت
+            chatbotToggle.addEventListener('click', function() {
+                chatbotWindow.style.display = chatbotWindow.style.display === 'flex' ? 'none' : 'flex';
+                if (chatbotWindow.style.display === 'flex') {
+                    chatbotInput.focus();
+                }
+            });
+
+            chatbotClose.addEventListener('click', function() {
+                chatbotWindow.style.display = 'none';
+            });
+
+            // إرسال رسالة عند الضغط على زر الإرسال
+            chatbotSend.addEventListener('click', sendMessage);
+
+            // إرسال رسالة عند الضغط على Enter
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // ضبط ارتفاع حقل الإدخال تلقائياً
+            chatbotInput.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+
+            // دالة إرسال الرسالة
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (!message) return;
+
+                // إضافة رسالة المستخدم إلى الشات
+                addMessage(message, 'user');
+                chatbotInput.value = '';
+                chatbotInput.style.height = 'auto';
+                
+                // تعطيل زر الإرسال أثناء المعالجة
+                chatbotSend.disabled = true;
+
+                // إظهار مؤشر الكتابة
+                showTypingIndicator();
+
+                // إرسال الرسالة إلى n8n
+                sendToN8N(message);
+            }
+
+            // دالة إضافة رسالة إلى الشات
+            function addMessage(text, sender) {
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${sender}-message`;
+                messageElement.textContent = text;
+                chatbotMessages.appendChild(messageElement);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // دالة إظهار مؤشر الكتابة
+            function showTypingIndicator() {
+                const typingElement = document.createElement('div');
+                typingElement.className = 'typing-indicator';
+                typingElement.id = 'typingIndicator';
+                typingElement.innerHTML = `
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    جاري الكتابة...
+                `;
+                chatbotMessages.appendChild(typingElement);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            // دالة إخفاء مؤشر الكتابة
+            function hideTypingIndicator() {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+
+            // دالة إرسال الرسالة إلى n8n
+            function sendToN8N(message) {
+                // بيانات المرسلة إلى n8n
+                const requestData = {
+                    message: message,
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    language: navigator.language
+                };
+
+                // إرسال الطلب إلى n8n
+                fetch(n8nWebhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestData)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('فشل في الاتصال بالخادم');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // إخفاء مؤشر الكتابة
+                    hideTypingIndicator();
+                    
+                    // إضافة رد المساعد
+                    if (data.reply) {
+                        addMessage(data.reply, 'bot');
+                    } else {
+                        addMessage('عذراً، لم أستطع معالجة طلبك. يرجى المحاولة مرة أخرى.', 'bot');
+                    }
+                    
+                    // تمكين زر الإرسال مرة أخرى
+                    chatbotSend.disabled = false;
+                })
+                .catch(error => {
+                    // إخفاء مؤشر الكتابة
+                    hideTypingIndicator();
+                    
+                    // إضافة رسالة خطأ
+                    addMessage('.يتم برمجتي وتطويري بالوقت الحالي، عند الإنتهاء وقريباً سأتمكن من مساعدتك والإجابة عن جميع اسئلتك', 'bot');
+                    
+                    // تمكين زر الإرسال مرة أخرى
+                    chatbotSend.disabled = false;
+                    
+                    console.error('خطأ في الاتصال بـ n8n:', error);
+                });
+            }
+
+            // إضافة بعض الرسائل التلقائية للبدء
+            setTimeout(() => {
+                addMessage('يمكنني مساعدتك في العثور على المقررات التدريبية، اللوائح، التجارب الناجحة، وغيرها من الموارد المتاحة في المكتبة الرقمية.', 'bot');
+            }, 2000);
         }
 
         // إضافة بعض الأنماط الإضافية للرسوم المتحركة
